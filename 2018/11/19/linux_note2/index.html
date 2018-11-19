@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>wildpigger-技术专栏</title>
+  <title>面向对象拓展 | wildpigger-技术专栏</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="##面向对象的四大支柱：抽象、封装、继承、多态  抽象 - 定义类的过程就是提取共性的抽象过程  数据抽象 - 找到对象的静态特征 - 属性 - 找名词 行为抽象 - 找到对象的动态特征 - 方法 - 找动词   封装：将数据和操作数据的方法从逻辑上组成一个整体 - 对象  隐藏实现细节 暴露简单的调用接口   继承 - 从已有的类创建新类的过程  提供继承信息的称之为父类  得到继承的称之为子类">
+  <meta name="description" content="1. 面向对象的四大支柱：抽象、封装、继承、多态 抽象 - 定义类的过程就是提取共性的抽象过程  数据抽象 - 找到对象的静态特征 - 属性 - 找名词 行为抽象 - 找到对象的动态特征 - 方法 - 找动词   封装：将数据和操作数据的方法从逻辑上组成一个整体 - 对象  隐藏实现细节 暴露简单的调用接口   继承 - 从已有的类创建新类的过程  提供继承信息的称之为父类  得到继承的称之为子类">
 <meta name="keywords" content="python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="wildpigger-技术专栏">
+<meta property="og:title" content="面向对象拓展">
 <meta property="og:url" content="http://yoursite.com/2018/11/19/linux_note2/index.html">
 <meta property="og:site_name" content="wildpigger-技术专栏">
-<meta property="og:description" content="##面向对象的四大支柱：抽象、封装、继承、多态  抽象 - 定义类的过程就是提取共性的抽象过程  数据抽象 - 找到对象的静态特征 - 属性 - 找名词 行为抽象 - 找到对象的动态特征 - 方法 - 找动词   封装：将数据和操作数据的方法从逻辑上组成一个整体 - 对象  隐藏实现细节 暴露简单的调用接口   继承 - 从已有的类创建新类的过程  提供继承信息的称之为父类  得到继承的称之为子类">
+<meta property="og:description" content="1. 面向对象的四大支柱：抽象、封装、继承、多态 抽象 - 定义类的过程就是提取共性的抽象过程  数据抽象 - 找到对象的静态特征 - 属性 - 找名词 行为抽象 - 找到对象的动态特征 - 方法 - 找动词   封装：将数据和操作数据的方法从逻辑上组成一个整体 - 对象  隐藏实现细节 暴露简单的调用接口   继承 - 从已有的类创建新类的过程  提供继承信息的称之为父类  得到继承的称之为子类">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-11-19T07:49:23.038Z">
+<meta property="og:updated_time" content="2018-11-19T12:46:17.583Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="wildpigger-技术专栏">
-<meta name="twitter:description" content="##面向对象的四大支柱：抽象、封装、继承、多态  抽象 - 定义类的过程就是提取共性的抽象过程  数据抽象 - 找到对象的静态特征 - 属性 - 找名词 行为抽象 - 找到对象的动态特征 - 方法 - 找动词   封装：将数据和操作数据的方法从逻辑上组成一个整体 - 对象  隐藏实现细节 暴露简单的调用接口   继承 - 从已有的类创建新类的过程  提供继承信息的称之为父类  得到继承的称之为子类">
+<meta name="twitter:title" content="面向对象拓展">
+<meta name="twitter:description" content="1. 面向对象的四大支柱：抽象、封装、继承、多态 抽象 - 定义类的过程就是提取共性的抽象过程  数据抽象 - 找到对象的静态特征 - 属性 - 找名词 行为抽象 - 找到对象的动态特征 - 方法 - 找动词   封装：将数据和操作数据的方法从逻辑上组成一个整体 - 对象  隐藏实现细节 暴露简单的调用接口   继承 - 从已有的类创建新类的过程  提供继承信息的称之为父类  得到继承的称之为子类">
   
     <link rel="alternative" href="/atom.xml" title="wildpigger-技术专栏" type="application/atom+xml">
   
@@ -73,8 +73,6 @@
     			
             
     			
-    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
-    			
             
     			
     			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
@@ -84,7 +82,7 @@
 		<nav class="header-nav">
 			<div class="social">
 				
-					<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
+					<a class="github" target="_blank" href="https://github.com/z66980437" title="github"><i class="icon-github"></i></a>
 		        
 					<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
 		        
@@ -127,7 +125,7 @@
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
+						<a class="github" target="_blank" href="https://github.com/z66980437" title="github"><i class="icon-github"></i></a>
 			        
 						<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
 			        
@@ -162,10 +160,24 @@
             <article id="post-linux_note2" class="article article-type-post " itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      面向对象拓展
+    </h1>
+  
+
+        
+        <a href="/2018/11/19/linux_note2/" class="archive-article-date">
+  	<time datetime="2018-11-19T06:12:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-19</time>
+</a>
+        
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##面向对象的四大支柱：抽象、封装、继承、多态</p>
-<ul>
+        <h2 id="1-面向对象的四大支柱：抽象、封装、继承、多态"><a href="#1-面向对象的四大支柱：抽象、封装、继承、多态" class="headerlink" title="1. 面向对象的四大支柱：抽象、封装、继承、多态"></a>1. 面向对象的四大支柱：抽象、封装、继承、多态</h2><ul>
 <li><p>抽象 - 定义类的过程就是提取共性的抽象过程</p>
 <ul>
 <li>数据抽象 - 找到对象的静态特征 - 属性 - 找名词</li>
@@ -184,51 +196,61 @@
 </li>
 <li><p>多态 - 调用相同的方法做了不同的事情 - 同样的方法在运行时表现的不同行为</p>
 <ul>
-<li>子类重写父类的方法  不同的子类给出不同的实现版本</li>
-</ul>
-</li>
-</ul>
-<p>##类和类（对象和对象）之间的关系：</p>
-<ol>
-<li>is-a关系<ul>
-<li>继承关系</li>
-</ul>
-</li>
-<li>has-a关系<ul>
+<li>子类重写父类的方法  不同的子类给出不同的实现版本<a id="more"></a>
+<h2 id="2-类和类（对象和对象）之间的关系："><a href="#2-类和类（对象和对象）之间的关系：" class="headerlink" title="2. 类和类（对象和对象）之间的关系："></a>2. 类和类（对象和对象）之间的关系：</h2><h3 id="1-is-a关系"><a href="#1-is-a关系" class="headerlink" title="1. is-a关系"></a>1. is-a关系</h3></li>
+<li>继承关系<h3 id="2-has-a关系"><a href="#2-has-a关系" class="headerlink" title="2. has-a关系"></a>2. has-a关系</h3></li>
 <li>关联关系，又分为：<ul>
 <li>聚合关系</li>
-<li>合成关系</li>
+<li>合成关系<h3 id="3-use-a关系"><a href="#3-use-a关系" class="headerlink" title="3. use-a关系"></a>3. use-a关系</h3></li>
 </ul>
 </li>
-</ul>
-</li>
-<li>use-a关系<ul>
 <li>依赖关系</li>
 </ul>
 </li>
-</ol>
-<p>##定义枚举符号常量方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">from enum import Enum</span><br><span class="line">class Suite(Enum):</span><br><span class="line">    &quot;&quot;&quot;花色符号常量定义&quot;&quot;&quot;</span><br><span class="line">    SPADE=0</span><br><span class="line">    HEART=1</span><br><span class="line">    CLUB=2</span><br><span class="line">    DIAMOND=3</span><br></pre></td></tr></table></figure></p>
+</ul>
+<h2 id="3-定义枚举符号常量方法"><a href="#3-定义枚举符号常量方法" class="headerlink" title="3. 定义枚举符号常量方法"></a>3. 定义枚举符号常量方法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">from enum import Enum</span><br><span class="line">class Suite(Enum):</span><br><span class="line">    &quot;&quot;&quot;花色符号常量定义&quot;&quot;&quot;</span><br><span class="line">    SPADE=0</span><br><span class="line">    HEART=1</span><br><span class="line">    CLUB=2</span><br><span class="line">    DIAMOND=3</span><br></pre></td></tr></table></figure>
 <ul>
 <li>调用方法：类名.属性名</li>
 <li>查看具体值：类名.属性名.value</li>
 </ul>
-<p>##面向对象的七个设计原则；</p>
-<ol>
+<h2 id="4-面向对象的七个设计原则；"><a href="#4-面向对象的七个设计原则；" class="headerlink" title="4.面向对象的七个设计原则；"></a>4.面向对象的七个设计原则；</h2><ul>
+<li><ol>
 <li>单一职责原则<ul>
 <li>一个类只做该做的事情，不做不该做的事情 </li>
 </ul>
 </li>
-<li>开闭原则</li>
-<li>依赖倒转原则</li>
-<li>里氏替换原则</li>
-<li>接口隔离原则</li>
-<li>合成聚合复用原则</li>
-<li>最少知识原则<br>###–落地：GoF设计模式：23种经典场景</li>
 </ol>
-<p>##函数参数</p>
-<ul>
-<li>‘*’前面的参数称为位置参数（传参时不用指定参数名，按照位置传参即可）</li>
-<li>‘*’后面你的参数称为命名关键字参数（传参时必须给出参数名和参数值）<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">def sort_cards(self, *, key=lambda card:(card.suite.value,card.face)):</span><br><span class="line">        &quot;&quot;&quot;玩家整理手中的牌&quot;&quot;&quot;</span><br><span class="line">        self.cards.sort(key=key)</span><br></pre></td></tr></table></figure>
+</li>
+<li><ol start="2">
+<li>开闭原则</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>依赖倒转原则</li>
+</ol>
+</li>
+<li><ol start="4">
+<li>里氏替换原则</li>
+</ol>
+</li>
+<li><ol start="5">
+<li>接口隔离原则</li>
+</ol>
+</li>
+<li><ol start="6">
+<li>合成聚合复用原则</li>
+</ol>
+</li>
+<li><ol start="7">
+<li>最少知识原则<h3 id="–落地：GoF设计模式：23种经典场景"><a href="#–落地：GoF设计模式：23种经典场景" class="headerlink" title="–落地：GoF设计模式：23种经典场景"></a>–落地：GoF设计模式：23种经典场景</h3></li>
+</ol>
+</li>
+</ul>
+<h2 id="5-函数参数"><a href="#5-函数参数" class="headerlink" title="5. 函数参数"></a>5. 函数参数</h2><ul>
+<li><p>‘*’前面的参数称为位置参数（传参时不用指定参数名，按照位置传参即可）</p>
+</li>
+<li><p>‘*’后面你的参数称为命名关键字参数（传参时必须给出参数名和参数值）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">def sort_cards(self, *, key=lambda card:(card.suite.value,card.face)):</span><br><span class="line">        &quot;&quot;&quot;玩家整理手中的牌&quot;&quot;&quot;</span><br><span class="line">        self.cards.sort(key=key)</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 
@@ -247,6 +269,16 @@
                   <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
                   <div class="reward-box">
                     
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/wexin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
                     
                   </div>
                 </span>
@@ -324,20 +356,15 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/11/19/git_install_use/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/11/19/linux_note1/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          (no title)
+          linux_note1
         
       </div>
     </a>
   
-  
-    <a href="/2018/11/19/hexo_build_blog/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title"></div>
-      <i class="icon-circle-right"></i>
-    </a>
   
 </nav>
 
@@ -354,6 +381,19 @@
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-面向对象的四大支柱：抽象、封装、继承、多态"><span class="toc-number">1.</span> <span class="toc-text">1. 面向对象的四大支柱：抽象、封装、继承、多态</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-类和类（对象和对象）之间的关系："><span class="toc-number">2.</span> <span class="toc-text">2. 类和类（对象和对象）之间的关系：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-is-a关系"><span class="toc-number">2.1.</span> <span class="toc-text">1. is-a关系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-has-a关系"><span class="toc-number">2.2.</span> <span class="toc-text">2. has-a关系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-use-a关系"><span class="toc-number">2.3.</span> <span class="toc-text">3. use-a关系</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-定义枚举符号常量方法"><span class="toc-number">3.</span> <span class="toc-text">3. 定义枚举符号常量方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-面向对象的七个设计原则；"><span class="toc-number">4.</span> <span class="toc-text">4.面向对象的七个设计原则；</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#–落地：GoF设计模式：23种经典场景"><span class="toc-number">4.1.</span> <span class="toc-text">–落地：GoF设计模式：23种经典场景</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-函数参数"><span class="toc-number">5.</span> <span class="toc-text">5. 函数参数</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>
@@ -419,8 +459,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
       
     
       
-      
-      
     
       
       
@@ -432,15 +470,13 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      <li style="width: 50%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
-      
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      <li style="width: 50%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
       
         
     </ul>
@@ -503,38 +539,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     	</section>
     
 
-    
-    	<section class="tools-section tools-section-friends" q-show="friends">
-  		
-        <ul class="search-ul">
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
-            </li>
-          
-        </ul>
-  		
-    	</section>
     
 
     
