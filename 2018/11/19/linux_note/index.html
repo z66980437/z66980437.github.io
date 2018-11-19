@@ -1,0 +1,442 @@
+<!DOCTYPE HTML>
+<html>
+
+<head><meta name="generator" content="Hexo 3.8.0">
+	<link rel="bookmark" type="image/x-icon" href="/img/logo_miccall.png">
+	<link rel="shortcut icon" href="/img/logo_miccall.png">
+	
+			    <title>
+    wildpigger-技术专栏
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="/css/mic_main.css">
+    <link rel="stylesheet" href="/css/dropdownMenu.css">
+    <meta name="keywords" content="miccall">
+    
+    	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	 
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css">
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script async type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css">
+<link rel="stylesheet" href="/css/typo.css">
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">MICCALL</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special">
+            <ul class="menu links">
+			<!-- Homepage  主页  --> 
+			<li>
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        
+	                    </li></ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="简历">
+		                简历
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/group/" title="团队">
+		                团队
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="图库">
+		                图库
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tag/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/miccall" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="500px" href="http://500px.com" target="_blank" rel="noopener">
+                            <i class="icon fa fa-500px"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main">
+            <div class="post_page_title_img" style="height: 25rem;background-image: url();background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;">
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2></h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h1 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h1><h2 id="1-别名"><a href="#1-别名" class="headerlink" title="1.别名"></a>1.别名</h2><ul>
+<li>alias：示例：alias rm=‘rm -f’</li>
+<li>unalias：示例：unalias rm      —移除rm=‘rm -f’  回到最初rm，需再次别名成rm -i才能交互删除。<h4 id="ls：默认被别名成了ls-–color-auto"><a href="#ls：默认被别名成了ls-–color-auto" class="headerlink" title="ls：默认被别名成了ls –color=auto"></a>ls：默认被别名成了ls –color=auto</h4></li>
+</ul>
+<h2 id="2-压缩与解压缩"><a href="#2-压缩与解压缩" class="headerlink" title="2.压缩与解压缩"></a>2.压缩与解压缩</h2><ul>
+<li>压缩：gzip 文件名<pre><code>xz -z 文件名
+</code></pre></li>
+<li>解压缩：gunzip 文件名<pre><code>xz -d 文件名
+</code></pre></li>
+</ul>
+<h2 id="3-归档和解归档"><a href="#3-归档和解归档" class="headerlink" title="3. 归档和解归档"></a>3. 归档和解归档</h2><ul>
+<li>归档  tar -cvf 文件名</li>
+<li>解归档      tar -xvf 文件名</li>
+</ul>
+<h2 id="4-组合命令"><a href="#4-组合命令" class="headerlink" title="4.组合命令"></a>4.组合命令</h2><ul>
+<li>;连接，表示不管第一句成功与否都执行后面</li>
+<li>&amp;&amp;连接，表示第一句成功后才执行后面</li>
+<li>||连接，表示第一句失败了才执行后面</li>
+</ul>
+<h2 id="5-管道"><a href="#5-管道" class="headerlink" title="5. 管道"></a>5. 管道</h2><ul>
+<li>用|连接，表示前一条命令作为后一条命令的输入</li>
+</ul>
+<h2 id="6-重定向"><a href="#6-重定向" class="headerlink" title="6.重定向"></a>6.重定向</h2><ul>
+<li>:–&gt;: 表示覆盖重定向</li>
+<li>:–&gt;&gt;: 表示追加重定向</li>
+<li>:–2&gt;: 表示错误重定向<h4 id="示例：ls-R-gt-ok-txt-2-gt-error-txt"><a href="#示例：ls-R-gt-ok-txt-2-gt-error-txt" class="headerlink" title="示例：ls -R / &gt; ok.txt 2&gt; error.txt"></a>示例：ls -R / &gt; ok.txt 2&gt; error.txt</h4></li>
+</ul>
+<h1 id="vim"><a href="#vim" class="headerlink" title="vim"></a>vim</h1><h3 id="1-三种工作模式"><a href="#1-三种工作模式" class="headerlink" title="1.三种工作模式"></a>1.三种工作模式</h3><ul>
+<li><p>命令模式（初始模式）</p>
+<ul>
+<li>：set nu—–显示行号</li>
+<li>100j—– 向下移动100行</li>
+<li>20l—– 向右移动20列</li>
+<li>G(大写G)—–代码来到末行</li>
+<li>gg(小写g)—–代码来到首行</li>
+<li><p>500G—–代码来到500行</p>
+</li>
+<li><p>删除</p>
+<ul>
+<li>7dd—-删除从该行到后面7行</li>
+<li>d$—–删除从光标到该行结尾</li>
+<li>d0—–删除从行首到光标位置</li>
+<li>dw—–删除一个单词</li>
+</ul>
+</li>
+<li>撤销<ul>
+<li>u —-撤销  </li>
+</ul>
+</li>
+<li>复制<ul>
+<li>yy—- 复制一行</li>
+</ul>
+</li>
+<li>粘贴<ul>
+<li>p—-粘贴 </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>编辑模式</li>
+<li>末行模式</li>
+</ul>
+<h1 id="文件权限"><a href="#文件权限" class="headerlink" title="文件权限"></a>文件权限</h1><h2 id="1-参数介绍：-rw-r–r–-1-root-root"><a href="#1-参数介绍：-rw-r–r–-1-root-root" class="headerlink" title="1. 参数介绍：-rw-r–r–  1 root root"></a>1. 参数介绍：-rw-r–r–  1 root root</h2><ul>
+<li>第一个字符    <ul>
+<li>l—连接</li>
+<li>d—-文件夹</li>
+<li>‘-’—–文件</li>
+</ul>
+</li>
+<li>第2-4字符：文件的所有者对文件有何种操作权限<ul>
+<li>r  -  read - 读</li>
+<li>w -  write - 写</li>
+<li>x - execute - 执行</li>
+</ul>
+</li>
+<li>第5-7字符：文件所有者同组的成员对文件有何种操作权限</li>
+<li>第8-10字符：其他用户对文件有何种操作权限</li>
+<li>第一个root：文件所有者</li>
+</ul>
+<h2 id="2-权限修改"><a href="#2-权限修改" class="headerlink" title="2. 权限修改"></a>2. 权限修改</h2><ul>
+<li>chmod u+(-)x(rw) 文件名     所有者可执行</li>
+<li>chmod g+(-)x(rw) 文件名     所有者同组成员可执行</li>
+<li>chmod o+(-)x(rw) 文件名     其他用户可执行</li>
+</ul>
+<h2 id="3-改变文件所有者"><a href="#3-改变文件所有者" class="headerlink" title="3. 改变文件所有者"></a>3. 改变文件所有者</h2><ul>
+<li>chown 新的所有者 文件名——-改变文件所有者</li>
+</ul>
+<h2 id="4-改变文件所属组"><a href="#4-改变文件所属组" class="headerlink" title="4. 改变文件所属组"></a>4. 改变文件所属组</h2><ul>
+<li>chgroup 新的组 文件名 —–改变文件所有者</li>
+</ul>
+<h1 id="python2代码转换成python3代码"><a href="#python2代码转换成python3代码" class="headerlink" title="python2代码转换成python3代码"></a>python2代码转换成python3代码</h1><ul>
+<li><p>2to3工具</p>
+<ul>
+<li>示例：2to3 -w 文件名</li>
+<li><p>还需要进文件改解释器</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/python</span><br><span class="line"># coding: utf-8</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/python3</span><br><span class="line"># coding: utf-8</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="文件比较"><a href="#文件比较" class="headerlink" title="文件比较"></a>文件比较</h2><ul>
+<li>示例：vim -d 文件名1 文件名2</li>
+</ul>
+<h2 id="打开多个文件"><a href="#打开多个文件" class="headerlink" title="打开多个文件"></a>打开多个文件</h2><ul>
+<li>示例：vim 文件1 文件2</li>
+<li>:b 文件标号    切换文件</li>
+<li>:sp 水平分屏</li>
+<li>:vs 垂直分屏</li>
+</ul>
+<h1 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h1><ul>
+<li>ctrl+e / ctrl+y 下移/上移一行</li>
+<li>ctrl+f / ctrl+b 下移/上移一页</li>
+<li>ctrl+r 重做</li>
+<li>ctrl+w 按两下-切换窗口</li>
+</ul>
+<h2 id="末行模式"><a href="#末行模式" class="headerlink" title="末行模式"></a>末行模式</h2><ul>
+<li>set nu—–显示行号</li>
+<li>no nu—–取消行号</li>
+<li>syntax on —–语法高亮</li>
+<li>syntax off —–关闭语法高亮</li>
+<li>sp —–水平拆分 </li>
+<li>vs —–垂直拆分</li>
+<li>ls —–显示发开文件信息</li>
+<li>b <n> —–切换文件</n></li>
+<li>w -write –保存</li>
+<li>q -quit –退出</li>
+<li>!—-强制执行</li>
+<li>map —-映射命令模式下的快捷键</li>
+<li>imap —-插入模式下的快捷键</li>
+<li>inoremap—-插入模式下的快捷键，不递归</li>
+<li>1,结束行s/要替代的内容/替代内容   ——查找替换<ul>
+<li>示例：1,$s/self/shit      —-$文末</li>
+<li>示例：1,$s/self/shit/c   —–/c（confirm）每次需确认</li>
+<li>示例：1,$s/self/shit/ci  —–i（ignore）忽略大小写</li>
+</ul>
+</li>
+</ul>
+<h2 id="设置vim配置文件"><a href="#设置vim配置文件" class="headerlink" title="设置vim配置文件"></a>设置vim配置文件</h2><ul>
+<li>vim ~/.vimrc</li>
+</ul>
+<h2 id="作业"><a href="#作业" class="headerlink" title="作业"></a>作业</h2><p>30个人（15个教徒和15个非教徒）坐船出海，船坏了需要把15个人丢下海才能生存，<br>规则：围成一圈从某人开始从1报数，报到9的人 丢到海里，下一个人继续从1开始报数，直到扔掉15人，结果15个教徒全部幸存，<br>问最开始的站位</p>
+<p>工资结算系统<br>三种员工<br>部门经理 15000/月<br>程序员  200/小时<br>销售员 1800底薪 + 5%销售额</p>
+<h2 id="linux-指令"><a href="#linux-指令" class="headerlink" title="linux 指令"></a>linux 指令</h2><ul>
+<li>tracepath - 查看经过的路由器 - tracepath <a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a>  结果多少个路由器才能到达百度</li>
+<li>ifconfig - 检查网络接口（网络适配器）</li>
+<li>ip - 查看配置网络接口相关信息</li>
+<li>netstat - 查看网络状态（端口占用、进程、已建立的连接）</li>
+<li>sftp - 安全网络文件传输</li>
+<li><p>scp - 安全文件拷贝 </p>
+<ul>
+<li>示例：scp 文件 用户名@公网ip：/目录/文件名</li>
+</ul>
+</li>
+<li><p>命令 &amp; - 让命令在后台运行</p>
+</li>
+<li>jobs - 查看后台运行的进程</li>
+<li>fg %编号 - 让命令回到前台运行</li>
+<li>bg %编号 - 让命令在后台运行</li>
+<li><p>ctrl+z - 将前台进程暂停放在后台</p>
+</li>
+<li><p>touch 文件名</p>
+<ul>
+<li>文件存在，改变文件最后访问时间为当前时间</li>
+<li>文件不存在， 创建文件</li>
+</ul>
+</li>
+</ul>
+<h2 id="输入命令时带的参数，叫命令行参数"><a href="#输入命令时带的参数，叫命令行参数" class="headerlink" title="输入命令时带的参数，叫命令行参数"></a>输入命令时带的参数，叫命令行参数</h2><ul>
+<li>导入模块sys<ul>
+<li>sys.argv可以获取命令行参数<ul>
+<li>sys.argv[0] 第一个参数（文件名）</li>
+<li>sys.argv[1…] 后续的参数，输入时以空格隔断</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #7EC0EE;
+            text-shadow: 0
+        }
+</style>
+	
+<div class="btn_click_load" id="disqus_bt"> 
+    <button class="disqus_click_btn">点击查看评论</button>
+</div>
+
+<!--
+<script type="text/javascript">
+$('.btn_click_load').click(function() {
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'http-miccall-tech'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    document.getElementById('disqus_bt').style.display = "none";
+});
+</script>
+-->
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://yoursite.com/2018/11/19/linux_note/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://yoursite.com/2018/11/19/linux_note/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/javascript">
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//http-miccall-tech.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+                <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>

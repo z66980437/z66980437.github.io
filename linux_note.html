@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="##1.别名  alias：示例：alias rm=‘rm -f’ unalias：示例：unalias rm      —移除rm=‘rm -f’  回到最初rm，需再次别名成rm -i才能交互删除。####ls：默认被别名成了ls –color=auto  ##2.压缩与解压缩  压缩：gzip 文件名xz -z 文件名  解压缩：gunzip 文件名xz -d 文件名   ##3. 归档和解">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/linux_note.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="##1.别名  alias：示例：alias rm=‘rm -f’ unalias：示例：unalias rm      —移除rm=‘rm -f’  回到最初rm，需再次别名成rm -i才能交互删除。####ls：默认被别名成了ls –color=auto  ##2.压缩与解压缩  压缩：gzip 文件名xz -z 文件名  解压缩：gunzip 文件名xz -d 文件名   ##3. 归档和解">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-11-19T03:56:00.056Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="##1.别名  alias：示例：alias rm=‘rm -f’ unalias：示例：unalias rm      —移除rm=‘rm -f’  回到最初rm，需再次别名成rm -i才能交互删除。####ls：默认被别名成了ls –color=auto  ##2.压缩与解压缩  压缩：gzip 文件名xz -z 文件名  解压缩：gunzip 文件名xz -d 文件名   ##3. 归档和解">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="page-" class="article article-type-page" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/linux_note.html" class="article-date">
+  <time datetime="2018-11-19T03:56:49.036Z" itemprop="datePublished">2018-11-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>##1.别名</p>
+<ul>
+<li>alias：示例：alias rm=‘rm -f’</li>
+<li>unalias：示例：unalias rm      —移除rm=‘rm -f’  回到最初rm，需再次别名成rm -i才能交互删除。<br>####ls：默认被别名成了ls –color=auto</li>
+</ul>
+<p>##2.压缩与解压缩</p>
+<ul>
+<li>压缩：gzip 文件名<pre><code>xz -z 文件名
+</code></pre></li>
+<li>解压缩：gunzip 文件名<pre><code>xz -d 文件名
+</code></pre></li>
+</ul>
+<p>##3. 归档和解归档</p>
+<ul>
+<li>归档  tar -cvf 文件名</li>
+<li>解归档      tar -xvf 文件名</li>
+</ul>
+<p>##4.组合命令</p>
+<ul>
+<li>;连接，表示不管第一句成功与否都执行后面</li>
+<li>&amp;&amp;连接，表示第一句成功后才执行后面</li>
+<li>||连接，表示第一句失败了才执行后面</li>
+</ul>
+<p>##5. 管道</p>
+<ul>
+<li>用|连接，表示前一条命令作为后一条命令的输入</li>
+</ul>
+<p>##6.重定向</p>
+<ul>
+<li><blockquote>
+<p>:    表示覆盖重定向</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>: 表示追加重定向</p>
+</blockquote>
+</li>
+<li>2&gt;: 表示错误重定向<br>####示例：ls -R / &gt; ok.txt 2&gt; error.txt</li>
+</ul>
+<p>#vim</p>
+<p>###1.三种工作模式</p>
+<ul>
+<li><p>命令模式（初始模式）</p>
+<ul>
+<li>：set nu—–显示行号</li>
+<li>100j—– 向下移动100行</li>
+<li>20l—– 向右移动20列</li>
+<li>G(大写G)—–代码来到末行</li>
+<li>gg(小写g)—–代码来到首行</li>
+<li><p>500G—–代码来到500行</p>
+</li>
+<li><p>删除</p>
+<ul>
+<li>7dd—-删除从该行到后面7行</li>
+<li>d$—–删除从光标到该行结尾</li>
+<li>d0—–删除从行首到光标位置</li>
+<li>dw—–删除一个单词</li>
+</ul>
+</li>
+<li>撤销<ul>
+<li>u —-撤销  </li>
+</ul>
+</li>
+<li>复制<ul>
+<li>yy—- 复制一行</li>
+</ul>
+</li>
+<li>粘贴<ul>
+<li>p—-粘贴 </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>编辑模式</li>
+<li>末行模式</li>
+</ul>
+<p>#文件权限</p>
+<p>##1. 参数介绍：-rw-r–r–  1 root root</p>
+<ul>
+<li>第一个字符    <ul>
+<li>l—连接</li>
+<li>d—-文件夹</li>
+<li>‘-’—–文件</li>
+</ul>
+</li>
+<li>第2-4字符：文件的所有者对文件有何种操作权限<ul>
+<li>r  -  read - 读</li>
+<li>w -  write - 写</li>
+<li>x - execute - 执行</li>
+</ul>
+</li>
+<li>第5-7字符：文件所有者同组的成员对文件有何种操作权限</li>
+<li>第8-10字符：其他用户对文件有何种操作权限</li>
+<li>第一个root：文件所有者</li>
+</ul>
+<p>##2. 权限修改</p>
+<ul>
+<li>chmod u+(-)x(rw) 文件名     所有者可执行</li>
+<li>chmod g+(-)x(rw) 文件名     所有者同组成员可执行</li>
+<li>chmod o+(-)x(rw) 文件名     其他用户可执行</li>
+</ul>
+<p>##3. 改变文件所有者</p>
+<ul>
+<li>chown 新的所有者 文件名——-改变文件所有者</li>
+</ul>
+<p>##4. 改变文件所属组</p>
+<ul>
+<li>chgroup 新的组 文件名 —–改变文件所有者</li>
+</ul>
+<p>#python2代码转换成python3代码</p>
+<ul>
+<li><p>2to3工具</p>
+<ul>
+<li>示例：2to3 -w 文件名</li>
+<li><p>还需要进文件改解释器</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/python</span><br><span class="line"># coding: utf-8</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/python3</span><br><span class="line"># coding: utf-8</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>##文件比较</p>
+<ul>
+<li>示例：vim -d 文件名1 文件名2</li>
+</ul>
+</li>
+</ul>
+<p>##打开多个文件</p>
+<ul>
+<li>示例：vim 文件1 文件2</li>
+<li>:b 文件标号    切换文件</li>
+<li>:sp 水平分屏</li>
+<li>:vs 垂直分屏</li>
+</ul>
+<p>#快捷键</p>
+<ul>
+<li>ctrl+e / ctrl+y 下移/上移一行</li>
+<li>ctrl+f / ctrl+b 下移/上移一页</li>
+<li>ctrl+r 重做</li>
+<li>ctrl+w 按两下-切换窗口</li>
+</ul>
+<p>#末行模式</p>
+<ul>
+<li>set nu—–显示行号</li>
+<li>no nu—–取消行号</li>
+<li>syntax on —–语法高亮</li>
+<li>syntax off —–关闭语法高亮</li>
+<li>sp —–水平拆分 </li>
+<li>vs —–垂直拆分</li>
+<li>ls —–显示发开文件信息</li>
+<li>b <n> —–切换文件</n></li>
+<li>w -write –保存</li>
+<li>q -quit –退出</li>
+<li>!—-强制执行</li>
+<li>map —-映射命令模式下的快捷键</li>
+<li>imap —-插入模式下的快捷键</li>
+<li>inoremap—-插入模式下的快捷键，不递归</li>
+<li>1,结束行s/要替代的内容/替代内容   ——查找替换<ul>
+<li>示例：1,$s/self/shit      —-$文末</li>
+<li>示例：1,$s/self/shit/c   —–/c（confirm）每次需确认</li>
+<li>示例：1,$s/self/shit/ci  —–i（ignore）忽略大小写</li>
+</ul>
+</li>
+</ul>
+<p>##设置vim配置文件</p>
+<ul>
+<li>vim ~/.vimrc</li>
+</ul>
+<p>##作业<br>30个人（15个教徒和15个非教徒）坐船出海，船坏了需要把15个人丢下海才能生存，<br>规则：围成一圈从某人开始从1报数，报到9的人 丢到海里，下一个人继续从1开始报数，直到扔掉15人，结果15个教徒全部幸存，<br>问最开始的站位</p>
+<p>工资结算系统<br>三种员工<br>部门经理 15000/月<br>程序员  200/小时<br>销售员 1800底薪 + 5%销售额</p>
+<p>##linux 指令</p>
+<ul>
+<li>tracepath - 查看经过的路由器 - tracepath <a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a>  结果多少个路由器才能到达百度</li>
+<li>ifconfig - 检查网络接口（网络适配器）</li>
+<li>ip - 查看配置网络接口相关信息</li>
+<li>netstat - 查看网络状态（端口占用、进程、已建立的连接）</li>
+<li>sftp - 安全网络文件传输</li>
+<li><p>scp - 安全文件拷贝 </p>
+<ul>
+<li>示例：scp 文件 用户名@公网ip：/目录/文件名</li>
+</ul>
+</li>
+<li><p>命令 &amp; - 让命令在后台运行</p>
+</li>
+<li>jobs - 查看后台运行的进程</li>
+<li>fg %编号 - 让命令回到前台运行</li>
+<li>bg %编号 - 让命令在后台运行</li>
+<li><p>ctrl+z - 将前台进程暂停放在后台</p>
+</li>
+<li><p>touch 文件名</p>
+<ul>
+<li>文件存在，改变文件最后访问时间为当前时间</li>
+<li>文件不存在， 创建文件</li>
+</ul>
+</li>
+</ul>
+<p>##输入命令时带的参数，叫命令行参数</p>
+<ul>
+<li>导入模块sys<ul>
+<li>sys.argv可以获取命令行参数<ul>
+<li>sys.argv[0] 第一个参数（文件名）</li>
+<li>sys.argv[1…] 后续的参数，输入时以空格隔断</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/linux_note.html" data-id="cjonsfj0y00007kpjrbncrivf" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/11/19/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
