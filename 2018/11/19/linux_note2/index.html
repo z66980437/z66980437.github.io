@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Head tag -->
+  <head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Title -->
+  
+  <title>wildpigger-技术专栏</title>
+
+  <!--Favicon-->
+  <link rel="icon" href="favicon/favicon.ico">
+
+  <!--Description-->
+  
+      <meta name="description" content="##面向对象的四大支柱：抽象、封装、继承、多态
+
+抽象 - 定义类的过程就是提取共性的抽象过程
+
+数据抽象 - 找到对象的静态特征 - 属性 - 找名词
+行为抽象 - 找到对象的动态特征 - 方法 - 找动词
+
+
+封装：将数据和操作数据的方法从逻辑上组成一个整体 - 对象
+
+隐藏实现细节 暴露简单的">
+  
+
+  <!--Author-->
+  
+      <meta name="author" content="wildpigger">
+  
+
+  <!-- Pure CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Open+Sans:300,800" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Google Analytics -->
+  
+
+</head>
+
+
+  <body>
+  	<div class="container-fluid navbar-container m-sm-5">
+      <!-- Header -->
+      <nav class="navbar navbar-toggleable-sm navbar-light px-1 py-3 my-3 mb-sm-5">
+  <a class="navbar-brand ml-2" href="/">wildpigger-技术专栏</a>
+  <button class="navbar-toggler navbar-toggler-right py-2" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse text-center" id="navbarCollapse">
+    <ul class="navbar-nav ml-auto my-auto">
+      
+    </ul>
+    <hr class="hidden-md-up">
+  </div>
+</nav>
+
+
+  		<div class="row">
+  			<div class="col-12 mb-4">
+  <img class="img-fluid project-img" src="/images/unsplash.jpg" alt="Portfolio Item">
+</div>
+<div class="col-lg-4 col-12 pt-3 px-4 pr-lg-5">
+  <h1>Portfolio Item</h1>
+</div>
+<div class="col-lg-8 col-12 pt-lg-3 mb-4 pl-lg-5 px-lg-0 px-4 portfolio-content">
+  <p>##面向对象的四大支柱：抽象、封装、继承、多态</p>
+<ul>
+<li><p>抽象 - 定义类的过程就是提取共性的抽象过程</p>
+<ul>
+<li>数据抽象 - 找到对象的静态特征 - 属性 - 找名词</li>
+<li>行为抽象 - 找到对象的动态特征 - 方法 - 找动词</li>
+</ul>
+</li>
+<li><p>封装：将数据和操作数据的方法从逻辑上组成一个整体 - 对象</p>
+<ul>
+<li>隐藏实现细节 暴露简单的调用接口</li>
+</ul>
+</li>
+<li><p>继承 - 从已有的类创建新类的过程</p>
+<ul>
+<li>提供继承信息的称之为父类  得到继承的称之为子类</li>
+</ul>
+</li>
+<li><p>多态 - 调用相同的方法做了不同的事情 - 同样的方法在运行时表现的不同行为</p>
+<ul>
+<li>子类重写父类的方法  不同的子类给出不同的实现版本</li>
+</ul>
+</li>
+</ul>
+<p>##类和类（对象和对象）之间的关系：</p>
+<ol>
+<li>is-a关系<ul>
+<li>继承关系</li>
+</ul>
+</li>
+<li>has-a关系<ul>
+<li>关联关系，又分为：<ul>
+<li>聚合关系</li>
+<li>合成关系</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>use-a关系<ul>
+<li>依赖关系</li>
+</ul>
+</li>
+</ol>
+<p>##定义枚举符号常量方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">from enum import Enum</span><br><span class="line">class Suite(Enum):</span><br><span class="line">    &quot;&quot;&quot;花色符号常量定义&quot;&quot;&quot;</span><br><span class="line">    SPADE=0</span><br><span class="line">    HEART=1</span><br><span class="line">    CLUB=2</span><br><span class="line">    DIAMOND=3</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>调用方法：类名.属性名</li>
+<li>查看具体值：类名.属性名.value</li>
+</ul>
+<p>##面向对象的七个设计原则；</p>
+<ol>
+<li>单一职责原则<ul>
+<li>一个类只做该做的事情，不做不该做的事情 </li>
+</ul>
+</li>
+<li>开闭原则</li>
+<li>依赖倒转原则</li>
+<li>里氏替换原则</li>
+<li>接口隔离原则</li>
+<li>合成聚合复用原则</li>
+<li>最少知识原则<br>###–落地：GoF设计模式：23种经典场景</li>
+</ol>
+<p>##函数参数</p>
+<ul>
+<li>‘*’前面的参数称为位置参数（传参时不用指定参数名，按照位置传参即可）</li>
+<li>‘*’后面你的参数称为命名关键字参数（传参时必须给出参数名和参数值）<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">def sort_cards(self, *, key=lambda card:(card.suite.value,card.face)):</span><br><span class="line">        &quot;&quot;&quot;玩家整理手中的牌&quot;&quot;&quot;</span><br><span class="line">        self.cards.sort(key=key)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+</div>
+
+
+      </div>
+      
+  	</div>
+
+    <!-- After footer scripts -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+  </body>
+</html>

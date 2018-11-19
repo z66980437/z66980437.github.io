@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Head tag -->
+  <head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Title -->
+  
+  <title>wildpigger-技术专栏</title>
+
+  <!--Favicon-->
+  <link rel="icon" href="favicon/favicon.ico">
+
+  <!--Description-->
+  
+      <meta name="description" content="git 安装与使用版本控制1990s - 锁定模式
+
+CVS - Concurrent Version System
+VSS - Visual Source Safe
+
+2000s - 合并模式
+
+SVN - Subversion - 集中控制式
+
+分布式版本控制系统 - BitKeeper2005">
+  
+
+  <!--Author-->
+  
+      <meta name="author" content="wildpigger">
+  
+
+  <!-- Pure CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Open+Sans:300,800" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Google Analytics -->
+  
+
+</head>
+
+
+  <body>
+  	<div class="container-fluid navbar-container m-sm-5">
+      <!-- Header -->
+      <nav class="navbar navbar-toggleable-sm navbar-light px-1 py-3 my-3 mb-sm-5">
+  <a class="navbar-brand ml-2" href="/">wildpigger-技术专栏</a>
+  <button class="navbar-toggler navbar-toggler-right py-2" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse text-center" id="navbarCollapse">
+    <ul class="navbar-nav ml-auto my-auto">
+      
+    </ul>
+    <hr class="hidden-md-up">
+  </div>
+</nav>
+
+
+  		<div class="row">
+  			<div class="col-12 mb-4">
+  <img class="img-fluid project-img" src="/images/unsplash.jpg" alt="Portfolio Item">
+</div>
+<div class="col-lg-4 col-12 pt-3 px-4 pr-lg-5">
+  <h1>Portfolio Item</h1>
+</div>
+<div class="col-lg-8 col-12 pt-lg-3 mb-4 pl-lg-5 px-lg-0 px-4 portfolio-content">
+  <p>git 安装与使用<br>版本控制<br>1990s - 锁定模式</p>
+<ul>
+<li>CVS - Concurrent Version System</li>
+<li>VSS - Visual Source Safe</li>
+</ul>
+<p>2000s - 合并模式</p>
+<ul>
+<li>SVN - Subversion - 集中控制式</li>
+</ul>
+<p>分布式版本控制系统 - BitKeeper<br>2005年 - Git / Mercury</p>
+<p>Git - 分布式版本控制系统 - 没有中央服务器也可以实施版本控制</p>
+<p>Linux系统安装Git<br>方法一：yum -y install git<br>方法二：</p>
+<ol>
+<li>下载git源代码压缩文件<br>wget <a href="https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.19.1.tar.xz" target="_blank" rel="noopener">https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.19.1.tar.xz</a></li>
+<li>解压缩和解归档<br>xz -d git-2.19.1.tar.xz<br>tar -xvf git-2.19.1.tar</li>
+<li>安装git的网络依赖库<br>yum -y install libcurl-devel curl libcurl</li>
+<li>配置安装路径<br>cd git-2.19.1<br>./configure –prefix=/usr/local</li>
+<li>构建和安装<br>make &amp;&amp; make install</li>
+<li>检查安装结果<br>git –version</li>
+</ol>
+<p>Git的使用</p>
+<ol>
+<li><p>创建git仓库 - .git - 两部分（缓存(暂存)区–仓库）<br>git init</p>
+</li>
+<li><p>将代码纳入暂存区<br>git add 文件名<br>git add .</p>
+</li>
+<li><p>查看暂存区状态<br>git status<br>git rm –cached 文件名（从暂存区移除）<br>git checkout – 文件名（将暂存区文件恢复到工作区）</p>
+</li>
+<li><p>配置身份标识<br>git config –global user.name “…”<br>git config –global user.email “…”</p>
+</li>
+<li><p>提交到本地仓库<br>git commit -m ‘…’</p>
+</li>
+<li><p>查看提交日志<br>git log<br>git reflog - 看到未来的版本（曾经提交过又被撤回的版本）</p>
+</li>
+<li><p>回到历史版本<br>git reset –hard HEAD^<br>git reset –hard HEAD^^<br>git reset –hard 版本的哈希摘要</p>
+</li>
+</ol>
+<p>–hard参数是为了保持工作区和历史版本的一致性</p>
+<p>搭建Git服务器</p>
+<ol>
+<li>使用网络上已有的代码托管平台 - github / gitee / coding</li>
+<li>搭建自己个Git私服 - gitlab</li>
+</ol>
+<p>git clone <url> - 从服务器上的项目克隆到本地</url></p>
+<p>在本地实施版本控制</p>
+<p>#如果Git联网操作报错通常是因为底层依赖库libcurl安装不正确<br>解决方法如下</p>
+<ol>
+<li>yum -y install curl libcurl libcurl-devel</li>
+<li>cd ~</li>
+<li>cd git-2.19.1</li>
+<li>make clean</li>
+<li>./configure –profix=/usr/local</li>
+<li>make &amp;&amp; make install</li>
+</ol>
+<p>git push - 将本地版本推到服务器<br>git pull - 将服务器版本拉到本地</p>
+<ol>
+<li>在gitee上创建一个新的项目</li>
+<li>克隆项目到本地</li>
+<li>在本地修改某个文件或者新增一些文件</li>
+<li>在本地实施版本控制</li>
+<li>将本地项目推到服务器</li>
+</ol>
+
+</div>
+
+
+      </div>
+      
+  	</div>
+
+    <!-- After footer scripts -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+  </body>
+</html>
