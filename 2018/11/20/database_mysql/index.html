@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>数据库简介与MySQL基础 | wildpigger-技术专栏</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="数据库 - 数据的仓库 - database DB - database DBMS - database manage system DBA - database administrator DBS - database system = DB + DBMS + DBA  关系型数据库 - 数据持久化 - 管理数据 - 方便的检索数据三个特点 理论基础：集合论、关系代数 表象：用二维表存储数据 行">
+  <meta name="description" content="数据库 - 数据的仓库 - database DB - database DBMS - database manage system DBA - database administrator DBS - database system = DB + DBMS + DBA">
 <meta name="keywords" content="python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据库简介与MySQL基础">
 <meta property="og:url" content="http://yoursite.com/2018/11/20/database_mysql/index.html">
 <meta property="og:site_name" content="wildpigger-技术专栏">
-<meta property="og:description" content="数据库 - 数据的仓库 - database DB - database DBMS - database manage system DBA - database administrator DBS - database system = DB + DBMS + DBA  关系型数据库 - 数据持久化 - 管理数据 - 方便的检索数据三个特点 理论基础：集合论、关系代数 表象：用二维表存储数据 行">
+<meta property="og:description" content="数据库 - 数据的仓库 - database DB - database DBMS - database manage system DBA - database administrator DBS - database system = DB + DBMS + DBA">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-11-20T09:49:08.019Z">
+<meta property="og:updated_time" content="2018-11-20T09:53:44.233Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据库简介与MySQL基础">
-<meta name="twitter:description" content="数据库 - 数据的仓库 - database DB - database DBMS - database manage system DBA - database administrator DBS - database system = DB + DBMS + DBA  关系型数据库 - 数据持久化 - 管理数据 - 方便的检索数据三个特点 理论基础：集合论、关系代数 表象：用二维表存储数据 行">
+<meta name="twitter:description" content="数据库 - 数据的仓库 - database DB - database DBMS - database manage system DBA - database administrator DBS - database system = DB + DBMS + DBA">
   
     <link rel="alternative" href="/atom.xml" title="wildpigger-技术专栏" type="application/atom+xml">
   
@@ -181,9 +181,8 @@
 <li>DB - database</li>
 <li>DBMS - database manage system</li>
 <li>DBA - database administrator</li>
-<li>DBS - database system = DB + DBMS + DBA</li>
-</ul>
-<h2 id="关系型数据库-数据持久化-管理数据-方便的检索数据"><a href="#关系型数据库-数据持久化-管理数据-方便的检索数据" class="headerlink" title="关系型数据库 - 数据持久化 - 管理数据 - 方便的检索数据"></a>关系型数据库 - 数据持久化 - 管理数据 - 方便的检索数据</h2><h3 id="三个特点"><a href="#三个特点" class="headerlink" title="三个特点"></a>三个特点</h3><ul>
+<li>DBS - database system = DB + DBMS + DBA<a id="more"></a>
+<h2 id="关系型数据库-数据持久化-管理数据-方便的检索数据"><a href="#关系型数据库-数据持久化-管理数据-方便的检索数据" class="headerlink" title="关系型数据库 - 数据持久化 - 管理数据 - 方便的检索数据"></a>关系型数据库 - 数据持久化 - 管理数据 - 方便的检索数据</h2><h3 id="三个特点"><a href="#三个特点" class="headerlink" title="三个特点"></a>三个特点</h3></li>
 <li>理论基础：集合论、关系代数</li>
 <li>表象：用二维表存储数据<ul>
 <li>行 - row - 记录</li>
@@ -296,25 +295,16 @@
 <li>ctrl+d 退出容器且关闭, docker ps 查看无</li>
 <li>ctrl+p+q 退出容器但不关闭, docker ps 查看有</li>
 </ul>
-<h2 id="mysql"><a href="#mysql" class="headerlink" title="mysql"></a>mysql</h2><h3 id="基础命令（cmd命令行查看）"><a href="#基础命令（cmd命令行查看）" class="headerlink" title="基础命令（cmd命令行查看）"></a>基础命令（cmd命令行查看）</h3><ul>
-<li>?<ul>
+<h2 id="mysql"><a href="#mysql" class="headerlink" title="mysql"></a>mysql</h2><h3 id="基础命令（cmd命令行查看）"><a href="#基础命令（cmd命令行查看）" class="headerlink" title="基础命令（cmd命令行查看）"></a>基础命令（cmd命令行查看）</h3><h4 id="1"><a href="#1" class="headerlink" title="1. ?"></a>1. ?</h4><ul>
 <li>? data types - 查看所有数据类型</li>
-<li>? 数据类型 - 查看该种数据类型的详细信息</li>
-</ul>
-</li>
-<li><p>show</p>
-<ul>
+<li>? 数据类型 - 查看该种数据类型的详细信息<h4 id="2-show"><a href="#2-show" class="headerlink" title="2. show"></a>2. show</h4></li>
 <li>show databases; - 显示当前所有的数据库</li>
 <li>show tables; - 显示当前数据库所有表</li>
 </ul>
-</li>
-<li><p>desc</p>
-<ul>
+<h4 id="3-desc"><a href="#3-desc" class="headerlink" title="3. desc"></a>3. desc</h4><ul>
 <li>desc 表名; - 查看表结构</li>
 </ul>
-</li>
-<li><p>create</p>
-<ul>
+<h4 id="4-create"><a href="#4-create" class="headerlink" title="4. create"></a>4. create</h4><ul>
 <li>create database 数据库名; - 新建数据库<ul>
 <li>create database school default charset utf8; - 创建数据库school，并设置字符集为utf8</li>
 </ul>
@@ -325,110 +315,56 @@
 </ul>
 </li>
 </ul>
-</li>
-<li><p>drop</p>
-<ul>
-<li>drop database 数据库名; - 删除此数据库<ul>
-<li>drop database if exists school; - 如果有名为school的数据库，就先删除原有的再创建</li>
-</ul>
-</li>
-<li>drop table 数据表名;<ul>
-<li>drop table if exists tb_student; - 如果有名为tb_student的数据表，就先删除原有的再创建</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>alter</p>
-<ul>
-<li>alter table 数据表名 add column 列名 格式设置; - 添加列<ul>
-<li>alter table tb_student add column stutel char(11);</li>
-</ul>
-</li>
-<li>alter table 数据表名 drop column 列名; - 删除列<ul>
-<li>alter table tb_student drop column stutel;</li>
-</ul>
-</li>
-<li>alter table 数据表名 change column 列名 新列名 格式设置; - 修改列<ul>
-<li>alter table tb_student change column stuname stuname varchar(20) not null;</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>insert</p>
-<ul>
-<li>insert into 表名 values (值1,值2…); - 全部列赋值</li>
-<li>insert into 表名 (列名1，列名2…) values (值1,值2…); - 部分列赋值</li>
-<li>insert into 表名 (列名1，列名2…) values (值1,值2…),(值1,值2…),(值1,值2…)…; - 一次插入多条数据</li>
-</ul>
-</li>
-<li><p>delete</p>
-<ul>
-<li>truncate table 表名; - 删全表 - 没有日志</li>
-<li>delete from 表名; - 删全表</li>
-<li>delete from 表名 where 条件; - 条件删除<ul>
-<li>不等于&lt;&gt;, 等于=, &gt;, &lt;, &gt;=, &lt;=, between 起始 and 结束(双闭区间)</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>update</p>
-<ul>
-<li>update 表名 set 列名=值 where 条件; - 一次更新一列</li>
-<li>update 表名 set 列名1=值2, 列名2=值2,… where 条件; - 一次更新多列</li>
-</ul>
-</li>
-<li><p>select</p>
-<ul>
-<li>select * from 表名; - 查看列表所有行和列</li>
-<li>select 列名1,列名2,… from 表名; - 查指定列(投影)</li>
-<li>select 列名1 as ‘别名1’,列名2 as ‘别名2’,… from 表名; - 在投影中别名列名</li>
-<li>select 列… from 表名 where 条件; - 筛选<ul>
-<li>查找空值时，不能用=,&lt;&gt;<ul>
-<li>select 列… from 表名 where 列名 is null;</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>select 列… from 表名 where 列名 like &lt;’%大%’&gt;; - 模糊查询,常用于字符串<ul>
-<li>_只能匹配一个字符, %匹配任意字符</li>
-</ul>
-</li>
-<li>select 列… from 表名 order by 列名1 asc, 列名2 desc;<ul>
-<li>asc:默认,升序</li>
-<li>desc:降序</li>
-</ul>
-</li>
-<li>select 列… from 表名 order by 列名 desc limit 每页显示个数; - 分页<ul>
-<li>select * from tb_student order by stuid desc limit 3 offset 2; - 与下面等价</li>
-<li>select * from tb_student order by stuid desc limit 2,3; - 与上面等价</li>
-</ul>
-</li>
-<li>select [distinct] 函数 from 表名; - 函数查询<ul>
-<li>distinct去重</li>
-<li>substr取子串</li>
-<li>concat拼接</li>
-<li>上这些函数MySQL专属，其他数据库可能没有，而下面这些函数各个关系型数据库都有，称为聚合函数</li>
-<li>max</li>
-<li>min</li>
-<li>sum</li>
-<li>avg</li>
-<li>count</li>
-</ul>
-</li>
-<li>select 列名, [函数] from 表名 group by 列名; - 分组查询<ul>
-<li>在复杂查询中,条件的书写顺序:where–&gt;group by–&gt;order by–&gt;limit,offset</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="用户管理"><a href="#用户管理" class="headerlink" title="用户管理"></a>用户管理</h3><ul>
-<li>新建用户<ul>
+<h4 id="5-drop"><a href="#5-drop" class="headerlink" title="5. drop"></a>5. drop</h4><pre><code>* drop database 数据库名; - 删除此数据库
+    * drop database if exists school; - 如果有名为school的数据库，就先删除原有的再创建
+* drop table 数据表名;
+    * drop table if exists tb_student; - 如果有名为tb_student的数据表，就先删除原有的再创建
+</code></pre><h4 id="6-alter"><a href="#6-alter" class="headerlink" title="6. alter"></a>6. alter</h4><pre><code>* alter table 数据表名 add column 列名 格式设置; - 添加列
+    * alter table tb_student add column stutel char(11);
+* alter table 数据表名 drop column 列名; - 删除列
+    * alter table tb_student drop column stutel;
+* alter table 数据表名 change column 列名 新列名 格式设置; - 修改列
+    * alter table tb_student change column stuname stuname varchar(20) not null;
+</code></pre><h4 id="7-insert"><a href="#7-insert" class="headerlink" title="7. insert"></a>7. insert</h4><pre><code>* insert into 表名 values (值1,值2...); - 全部列赋值
+* insert into 表名 (列名1，列名2...) values (值1,值2...); - 部分列赋值
+* insert into 表名 (列名1，列名2...) values (值1,值2...),(值1,值2...),(值1,值2...)...; - 一次插入多条数据
+</code></pre><h4 id="8-delete"><a href="#8-delete" class="headerlink" title="8. delete"></a>8. delete</h4><pre><code>* truncate table 表名; - 删全表 - 没有日志
+* delete from 表名; - 删全表
+* delete from 表名 where 条件; - 条件删除
+    * 不等于&lt;&gt;, 等于=, &gt;, &lt;, &gt;=, &lt;=, between 起始 and 结束(双闭区间)
+</code></pre><h4 id="9-update"><a href="#9-update" class="headerlink" title="9. update"></a>9. update</h4><pre><code>* update 表名 set 列名=值 where 条件; - 一次更新一列
+* update 表名 set 列名1=值2, 列名2=值2,... where 条件; - 一次更新多列
+</code></pre><h4 id="10-select"><a href="#10-select" class="headerlink" title="10. select"></a>10. select</h4><pre><code>* select * from 表名; - 查看列表所有行和列
+* select 列名1,列名2,... from 表名; - 查指定列(投影)
+* select 列名1 as &apos;别名1&apos;,列名2 as &apos;别名2&apos;,... from 表名; - 在投影中别名列名
+* select 列... from 表名 where 条件; - 筛选
+    * 查找空值时，不能用=,&lt;&gt;
+        * select 列... from 表名 where 列名 is null;
+* select 列... from 表名 where 列名 like &lt;&apos;%大%&apos;&gt;; - 模糊查询,常用于字符串
+    * \_只能匹配一个字符, %匹配任意字符
+* select 列... from 表名 order by 列名1 asc, 列名2 desc;
+    * asc:默认,升序
+    * desc:降序
+* select 列... from 表名 order by 列名 desc limit 每页显示个数; - 分页
+    * select * from tb_student order by stuid desc limit 3 offset 2; - 与下面等价
+    * select * from tb_student order by stuid desc limit 2,3; - 与上面等价
+* select [distinct] 函数 from 表名; - 函数查询
+    * distinct去重
+    * substr取子串
+    * concat拼接
+    * 上这些函数MySQL专属，其他数据库可能没有，而下面这些函数各个关系型数据库都有，称为聚合函数
+    * max
+    * min
+    * sum
+    * avg
+    * count
+* select 列名, [函数] from 表名 group by 列名; - 分组查询
+    * 在复杂查询中,条件的书写顺序:where--&gt;group by--&gt;order by--&gt;limit,offset
+</code></pre><h3 id="用户管理"><a href="#用户管理" class="headerlink" title="用户管理"></a>用户管理</h3><h4 id="1-新建用户"><a href="#1-新建用户" class="headerlink" title="1. 新建用户"></a>1. 新建用户</h4><ul>
 <li>create user ‘用户名‘@’接入限制’ identified by ‘密码’;</li>
 <li>接入限制:’localhost’只能从本机访问,’ip地址’只能从指定ip访问,’%’任意方式都能访问</li>
 </ul>
-</li>
-<li>授权<ul>
+<h4 id="2-授权"><a href="#2-授权" class="headerlink" title="2. 授权"></a>2. 授权</h4><ul>
 <li>grant [权限名] on [作用库、表] to ‘wild‘@’%’[ with grant option];<ul>
 <li>with grant option:授权后该用户还可以授权给别人</li>
 <li>权限名：<ul>
@@ -439,8 +375,6 @@
 <li>作用库、表<ul>
 <li>*.*:所有库和表</li>
 <li>参数1.参数2:参数1是数据库名,参数2是表名</li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
@@ -583,7 +517,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#数据库-数据的仓库-database"><span class="toc-number">1.</span> <span class="toc-text">数据库 - 数据的仓库 - database</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#关系型数据库-数据持久化-管理数据-方便的检索数据"><span class="toc-number">1.1.</span> <span class="toc-text">关系型数据库 - 数据持久化 - 管理数据 - 方便的检索数据</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#三个特点"><span class="toc-number">1.1.1.</span> <span class="toc-text">三个特点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#关系型数据库产品"><span class="toc-number">1.1.2.</span> <span class="toc-text">关系型数据库产品</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#非关系型数据库产品"><span class="toc-number">1.1.3.</span> <span class="toc-text">非关系型数据库产品</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#启动MySQL服务器"><span class="toc-number">1.1.4.</span> <span class="toc-text">启动MySQL服务器</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#虚拟机-模拟器（centos-7-下）"><span class="toc-number">1.2.</span> <span class="toc-text">虚拟机 - 模拟器（centos 7 下）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-分类"><span class="toc-number">1.2.1.</span> <span class="toc-text">1. 分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-安装Docker"><span class="toc-number">1.2.2.</span> <span class="toc-text">2. 安装Docker</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-启动docker"><span class="toc-number">1.2.3.</span> <span class="toc-text">3. 启动docker</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-下载MySQL官方镜像"><span class="toc-number">1.2.4.</span> <span class="toc-text">4. 下载MySQL官方镜像</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-查看MySQL镜像"><span class="toc-number">1.2.5.</span> <span class="toc-text">5. 查看MySQL镜像</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-创建容器运行MySQL"><span class="toc-number">1.2.6.</span> <span class="toc-text">6. 创建容器运行MySQL</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-进入容器"><span class="toc-number">1.2.7.</span> <span class="toc-text">7. 进入容器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-登录数据库"><span class="toc-number">1.2.8.</span> <span class="toc-text">8. 登录数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-退出容器"><span class="toc-number">1.2.9.</span> <span class="toc-text">9. 退出容器</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#mysql"><span class="toc-number">1.3.</span> <span class="toc-text">mysql</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#基础命令（cmd命令行查看）"><span class="toc-number">1.3.1.</span> <span class="toc-text">基础命令（cmd命令行查看）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#用户管理"><span class="toc-number">1.3.2.</span> <span class="toc-text">用户管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#表与表之间的关系"><span class="toc-number">1.3.3.</span> <span class="toc-text">表与表之间的关系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#外键-外来的主键-其他表的主键"><span class="toc-number">1.3.4.</span> <span class="toc-text">外键:外来的主键(其他表的主键)</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#数据库-数据的仓库-database"><span class="toc-number">1.</span> <span class="toc-text">数据库 - 数据的仓库 - database</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#关系型数据库-数据持久化-管理数据-方便的检索数据"><span class="toc-number">1.1.</span> <span class="toc-text">关系型数据库 - 数据持久化 - 管理数据 - 方便的检索数据</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#三个特点"><span class="toc-number">1.1.1.</span> <span class="toc-text">三个特点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#关系型数据库产品"><span class="toc-number">1.1.2.</span> <span class="toc-text">关系型数据库产品</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#非关系型数据库产品"><span class="toc-number">1.1.3.</span> <span class="toc-text">非关系型数据库产品</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#启动MySQL服务器"><span class="toc-number">1.1.4.</span> <span class="toc-text">启动MySQL服务器</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#虚拟机-模拟器（centos-7-下）"><span class="toc-number">1.2.</span> <span class="toc-text">虚拟机 - 模拟器（centos 7 下）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-分类"><span class="toc-number">1.2.1.</span> <span class="toc-text">1. 分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-安装Docker"><span class="toc-number">1.2.2.</span> <span class="toc-text">2. 安装Docker</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-启动docker"><span class="toc-number">1.2.3.</span> <span class="toc-text">3. 启动docker</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-下载MySQL官方镜像"><span class="toc-number">1.2.4.</span> <span class="toc-text">4. 下载MySQL官方镜像</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-查看MySQL镜像"><span class="toc-number">1.2.5.</span> <span class="toc-text">5. 查看MySQL镜像</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-创建容器运行MySQL"><span class="toc-number">1.2.6.</span> <span class="toc-text">6. 创建容器运行MySQL</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-进入容器"><span class="toc-number">1.2.7.</span> <span class="toc-text">7. 进入容器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-登录数据库"><span class="toc-number">1.2.8.</span> <span class="toc-text">8. 登录数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-退出容器"><span class="toc-number">1.2.9.</span> <span class="toc-text">9. 退出容器</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#mysql"><span class="toc-number">1.3.</span> <span class="toc-text">mysql</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#基础命令（cmd命令行查看）"><span class="toc-number">1.3.1.</span> <span class="toc-text">基础命令（cmd命令行查看）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1"><span class="toc-number">1.3.1.1.</span> <span class="toc-text">1. ?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-show"><span class="toc-number">1.3.1.2.</span> <span class="toc-text">2. show</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-desc"><span class="toc-number">1.3.1.3.</span> <span class="toc-text">3. desc</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-create"><span class="toc-number">1.3.1.4.</span> <span class="toc-text">4. create</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-drop"><span class="toc-number">1.3.1.5.</span> <span class="toc-text">5. drop</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-alter"><span class="toc-number">1.3.1.6.</span> <span class="toc-text">6. alter</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-insert"><span class="toc-number">1.3.1.7.</span> <span class="toc-text">7. insert</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-delete"><span class="toc-number">1.3.1.8.</span> <span class="toc-text">8. delete</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#9-update"><span class="toc-number">1.3.1.9.</span> <span class="toc-text">9. update</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#10-select"><span class="toc-number">1.3.1.10.</span> <span class="toc-text">10. select</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#用户管理"><span class="toc-number">1.3.2.</span> <span class="toc-text">用户管理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-新建用户"><span class="toc-number">1.3.2.1.</span> <span class="toc-text">1. 新建用户</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-授权"><span class="toc-number">1.3.2.2.</span> <span class="toc-text">2. 授权</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#表与表之间的关系"><span class="toc-number">1.3.3.</span> <span class="toc-text">表与表之间的关系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#外键-外来的主键-其他表的主键"><span class="toc-number">1.3.4.</span> <span class="toc-text">外键:外来的主键(其他表的主键)</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
