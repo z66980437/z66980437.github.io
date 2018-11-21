@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>面向对象拓展 | wildpigger-技术专栏</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1. 面向对象的四大支柱：抽象、封装、继承、多态 抽象 - 定义类的过程就是提取共性的抽象过程  数据抽象 - 找到对象的静态特征 - 属性 - 找名词 行为抽象 - 找到对象的动态特征 - 方法 - 找动词   封装：将数据和操作数据的方法从逻辑上组成一个整体 - 对象  隐藏实现细节 暴露简单的调用接口   继承 - 从已有的类创建新类的过程  提供继承信息的称之为父类  得到继承的称之为子类">
+  <meta name="description" content="1. 面向对象的四大支柱：抽象、封装、继承、多态 抽象 - 定义类的过程就是提取共性的抽象过程  数据抽象 - 找到对象的静态特征 - 属性 - 找名词 行为抽象 - 找到对象的动态特征 - 方法 - 找动词   封装：将数据和操作数据的方法从逻辑上组成一个整体 - 对象  隐藏实现细节 暴露简单的调用接口">
 <meta name="keywords" content="python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="面向对象拓展">
 <meta property="og:url" content="http://yoursite.com/2018/11/19/linux_note2/index.html">
 <meta property="og:site_name" content="wildpigger-技术专栏">
-<meta property="og:description" content="1. 面向对象的四大支柱：抽象、封装、继承、多态 抽象 - 定义类的过程就是提取共性的抽象过程  数据抽象 - 找到对象的静态特征 - 属性 - 找名词 行为抽象 - 找到对象的动态特征 - 方法 - 找动词   封装：将数据和操作数据的方法从逻辑上组成一个整体 - 对象  隐藏实现细节 暴露简单的调用接口   继承 - 从已有的类创建新类的过程  提供继承信息的称之为父类  得到继承的称之为子类">
+<meta property="og:description" content="1. 面向对象的四大支柱：抽象、封装、继承、多态 抽象 - 定义类的过程就是提取共性的抽象过程  数据抽象 - 找到对象的静态特征 - 属性 - 找名词 行为抽象 - 找到对象的动态特征 - 方法 - 找动词   封装：将数据和操作数据的方法从逻辑上组成一个整体 - 对象  隐藏实现细节 暴露简单的调用接口">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-11-19T12:46:17.583Z">
+<meta property="og:updated_time" content="2018-11-21T11:29:38.052Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面向对象拓展">
-<meta name="twitter:description" content="1. 面向对象的四大支柱：抽象、封装、继承、多态 抽象 - 定义类的过程就是提取共性的抽象过程  数据抽象 - 找到对象的静态特征 - 属性 - 找名词 行为抽象 - 找到对象的动态特征 - 方法 - 找动词   封装：将数据和操作数据的方法从逻辑上组成一个整体 - 对象  隐藏实现细节 暴露简单的调用接口   继承 - 从已有的类创建新类的过程  提供继承信息的称之为父类  得到继承的称之为子类">
+<meta name="twitter:description" content="1. 面向对象的四大支柱：抽象、封装、继承、多态 抽象 - 定义类的过程就是提取共性的抽象过程  数据抽象 - 找到对象的静态特征 - 属性 - 找名词 行为抽象 - 找到对象的动态特征 - 方法 - 找动词   封装：将数据和操作数据的方法从逻辑上组成一个整体 - 对象  隐藏实现细节 暴露简单的调用接口">
   
     <link rel="alternative" href="/atom.xml" title="wildpigger-技术专栏" type="application/atom+xml">
   
@@ -186,7 +186,7 @@
 </li>
 <li><p>封装：将数据和操作数据的方法从逻辑上组成一个整体 - 对象</p>
 <ul>
-<li>隐藏实现细节 暴露简单的调用接口</li>
+<li>隐藏实现细节 暴露简单的调用接口<a id="more"></a></li>
 </ul>
 </li>
 <li><p>继承 - 从已有的类创建新类的过程</p>
@@ -196,19 +196,16 @@
 </li>
 <li><p>多态 - 调用相同的方法做了不同的事情 - 同样的方法在运行时表现的不同行为</p>
 <ul>
-<li>子类重写父类的方法  不同的子类给出不同的实现版本<a id="more"></a>
-<h2 id="2-类和类（对象和对象）之间的关系："><a href="#2-类和类（对象和对象）之间的关系：" class="headerlink" title="2. 类和类（对象和对象）之间的关系："></a>2. 类和类（对象和对象）之间的关系：</h2><h3 id="1-is-a关系"><a href="#1-is-a关系" class="headerlink" title="1. is-a关系"></a>1. is-a关系</h3></li>
-<li>继承关系<h3 id="2-has-a关系"><a href="#2-has-a关系" class="headerlink" title="2. has-a关系"></a>2. has-a关系</h3></li>
-<li>关联关系，又分为：<ul>
-<li>聚合关系</li>
-<li>合成关系<h3 id="3-use-a关系"><a href="#3-use-a关系" class="headerlink" title="3. use-a关系"></a>3. use-a关系</h3></li>
-</ul>
-</li>
-<li>依赖关系</li>
+<li>子类重写父类的方法  不同的子类给出不同的实现版本</li>
 </ul>
 </li>
 </ul>
-<h2 id="3-定义枚举符号常量方法"><a href="#3-定义枚举符号常量方法" class="headerlink" title="3. 定义枚举符号常量方法"></a>3. 定义枚举符号常量方法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">from enum import Enum</span><br><span class="line">class Suite(Enum):</span><br><span class="line">    &quot;&quot;&quot;花色符号常量定义&quot;&quot;&quot;</span><br><span class="line">    SPADE=0</span><br><span class="line">    HEART=1</span><br><span class="line">    CLUB=2</span><br><span class="line">    DIAMOND=3</span><br></pre></td></tr></table></figure>
+<h2 id="2-类和类（对象和对象）之间的关系："><a href="#2-类和类（对象和对象）之间的关系：" class="headerlink" title="2. 类和类（对象和对象）之间的关系："></a>2. 类和类（对象和对象）之间的关系：</h2><h3 id="1-is-a关系"><a href="#1-is-a关系" class="headerlink" title="1. is-a关系"></a>1. is-a关系</h3><pre><code>* 继承关系
+</code></pre><h3 id="2-has-a关系"><a href="#2-has-a关系" class="headerlink" title="2. has-a关系"></a>2. has-a关系</h3><pre><code>* 关联关系，又分为：
+    * 聚合关系
+    * 合成关系
+</code></pre><h3 id="3-use-a关系"><a href="#3-use-a关系" class="headerlink" title="3. use-a关系"></a>3. use-a关系</h3><pre><code>* 依赖关系
+</code></pre><h2 id="3-定义枚举符号常量方法"><a href="#3-定义枚举符号常量方法" class="headerlink" title="3. 定义枚举符号常量方法"></a>3. 定义枚举符号常量方法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">from enum import Enum</span><br><span class="line">class Suite(Enum):</span><br><span class="line">    &quot;&quot;&quot;花色符号常量定义&quot;&quot;&quot;</span><br><span class="line">    SPADE=0</span><br><span class="line">    HEART=1</span><br><span class="line">    CLUB=2</span><br><span class="line">    DIAMOND=3</span><br></pre></td></tr></table></figure>
 <ul>
 <li>调用方法：类名.属性名</li>
 <li>查看具体值：类名.属性名.value</li>
