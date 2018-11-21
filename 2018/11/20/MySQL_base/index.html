@@ -6,16 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2018/11 | wildpigger-技术专栏</title>
+  <title>MySQL基础-续 | wildpigger-技术专栏</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="python">
-<meta property="og:type" content="website">
-<meta property="og:title" content="wildpigger-技术专栏">
-<meta property="og:url" content="http://yoursite.com/archives/2018/11/index.html">
+  <meta name="description" content="#MySQL基础 1. 外键和主键 添加  建表时添加">
+<meta name="keywords" content="python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MySQL基础-续">
+<meta property="og:url" content="http://yoursite.com/2018/11/20/MySQL_base/index.html">
 <meta property="og:site_name" content="wildpigger-技术专栏">
+<meta property="og:description" content="#MySQL基础 1. 外键和主键 添加  建表时添加">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-11-21T09:26:26.279Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="wildpigger-技术专栏">
+<meta name="twitter:title" content="MySQL基础-续">
+<meta name="twitter:description" content="#MySQL基础 1. 外键和主键 添加  建表时添加">
   
     <link rel="alternative" href="/atom.xml" title="wildpigger-技术专栏" type="application/atom+xml">
   
@@ -153,184 +157,314 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-MySQL_base" class="article article-type-post " itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      MySQL基础-续
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/11/20/MySQL_base/" class="archive-article-date">
+
+        
+        <a href="/2018/11/20/MySQL_base/" class="archive-article-date">
   	<time datetime="2018-11-20T09:48:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-20</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/11/20/MySQL_base/">MySQL基础-续</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#MySQL基础</p>
+<h2 id="1-外键和主键"><a href="#1-外键和主键" class="headerlink" title="1. 外键和主键"></a>1. 外键和主键</h2><ul>
+<li><p>添加</p>
+<ul>
+<li><p>建表时添加</p>
+<a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">create table tb_teacher</span><br><span class="line">(</span><br><span class="line">tid int not null comment &apos;教师编号&apos;,</span><br><span class="line">tname varchar(20) not null comment &apos;教师姓名&apos;,</span><br><span class="line">title enum(&apos;教授&apos;,&apos;副教授&apos;,&apos;讲师&apos;,&apos;助教&apos;) not null comment &apos;教师职称&apos;,</span><br><span class="line">cid int not null comment &apos;所属学院编号&apos;,</span><br><span class="line">-- 建表时添加外键</span><br><span class="line">foreign key (cid) references tb_college (collid),</span><br><span class="line">primary key (tid)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>建表后添加</p>
+<ul>
+<li>添加主键约束<ul>
+<li>alter table 所属表 add constraint 主键名 primary key (要设置主键的列名);</li>
+<li>示例:alter table tb_teacher add constraint pk_teacher_id primary key (tid);</li>
+</ul>
+</li>
+<li>添加外键约束(参照完整性约束)<ul>
+<li>alter table 所属表 add constraint 外键名 foreign key (要设置外键的列名) references 要参照的表名 (要参照的列名);</li>
+<li>示例:alter table tb_teacher add constraint fk_teacher_cid foreign key (cid) references tb_college (collid);</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>删除</p>
+<ul>
+<li>删除主键约束<br>  * </li>
+<li>删除外键约束<ul>
+<li>alter table 表名 drop constraint 外键名;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>添加外键后，参照的列不能进行删除和更新</p>
+<ul>
+<li>由于设置外键时默认有一条语句:on delete 值 on update 值<ul>
+<li>值：<ul>
+<li>restrict 默认</li>
+<li>set null 有非空约束时不能使用</li>
+<li>cascade 级联</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-表与表之间关系处理"><a href="#2-表与表之间关系处理" class="headerlink" title="2. 表与表之间关系处理"></a>2. 表与表之间关系处理</h2><h3 id="1-处理一对多"><a href="#1-处理一对多" class="headerlink" title="1. 处理一对多"></a>1. 处理一对多</h3><ul>
+<li>在多的一边加外键列来维护外键关系。</li>
+</ul>
+<h3 id="1-处理多对多关系"><a href="#1-处理多对多关系" class="headerlink" title="1. 处理多对多关系"></a>1. 处理多对多关系</h3><ul>
+<li>建立中间表来维护<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">create table tb_teacher_course</span><br><span class="line">(</span><br><span class="line">tcid int auto_increment,</span><br><span class="line">tid int not null,</span><br><span class="line">cid int not null,</span><br><span class="line">opendate date not null,</span><br><span class="line">primary key (tcid),</span><br><span class="line">foreign key (tid) references tb_teacher (tid),</span><br><span class="line">foreign key (cid) references tb_course (cid)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="子查询"><a href="#子查询" class="headerlink" title="子查询"></a>子查询</h2><h3 id="在一个查询中又使用到了另外一个查询的结果"><a href="#在一个查询中又使用到了另外一个查询的结果" class="headerlink" title="在一个查询中又使用到了另外一个查询的结果"></a>在一个查询中又使用到了另外一个查询的结果</h3><ul>
+<li>select 列名 from 表 where 列名 关系符号 (select 列名 from 表 …);</li>
+</ul>
+<h2 id="连接查询"><a href="#连接查询" class="headerlink" title="连接查询"></a>连接查询</h2><h3 id="常规"><a href="#常规" class="headerlink" title="常规"></a>常规</h3><ul>
+<li>select 列1,列2,… from 表1,表2,… where 表连接条件;<ul>
+<li>如果查询多表又不加条件会得到一个笛卡尔积</li>
+<li>表连接条件：一般是外键，若两表列重名：表名1.列名=表名2.列名</li>
+</ul>
+</li>
+</ul>
+<h3 id="内连接"><a href="#内连接" class="headerlink" title="内连接"></a>内连接</h3><ul>
+<li>表1 inner join 表2 on 连接条件<ul>
+<li>将满足条件的表1、表2内容连接起来</li>
+</ul>
+</li>
+</ul>
+<h3 id="外连接"><a href="#外连接" class="headerlink" title="外连接"></a>外连接</h3><h4 id="1-左外连接"><a href="#1-左外连接" class="headerlink" title="1. 左外连接"></a>1. 左外连接</h4><ul>
+<li>表1 left outer 表2 on 连接条件<ul>
+<li>将inner join换成left outer</li>
+<li>先满足left outer左边的完整性，不满足连表条件的对应值补null</li>
+</ul>
+</li>
+</ul>
+<h4 id="2-右外连接"><a href="#2-右外连接" class="headerlink" title="2. 右外连接"></a>2. 右外连接</h4><ul>
+<li>表1 right outer 表2 on 连接条件<ul>
+<li>将inner join换成right outer</li>
+<li>先满足right outer右边的完整性，不满足连表条件的对应值补null</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-全外连接-MySQL不支持"><a href="#3-全外连接-MySQL不支持" class="headerlink" title="3. 全外连接(MySQL不支持)"></a>3. 全外连接(MySQL不支持)</h3><ul>
+<li>表1 full outer 表2 on 连接条件<ul>
+<li>将inner join换成full outer</li>
+<li>满足full outer两边的完整性，不满足连表条件的对应值补null</li>
+</ul>
+</li>
+</ul>
+<h2 id="事务-transaction"><a href="#事务-transaction" class="headerlink" title="事务(transaction)"></a>事务(transaction)</h2><h3 id="概念-让一定数量的语句-操作-，要么全部执行成功，要么全部执行失败"><a href="#概念-让一定数量的语句-操作-，要么全部执行成功，要么全部执行失败" class="headerlink" title="概念:让一定数量的语句(操作)，要么全部执行成功，要么全部执行失败"></a>概念:让一定数量的语句(操作)，要么全部执行成功，要么全部执行失败</h3><h3 id="事务的四个属性-ACID特性"><a href="#事务的四个属性-ACID特性" class="headerlink" title="事务的四个属性(ACID特性)"></a>事务的四个属性(ACID特性)</h3><ul>
+<li><ol>
+<li>原子性(Atomicity)<ul>
+<li>事务中的操作不可分割</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>一致性(Consistency)<ul>
+<li>事务前后数据状态要一致</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>隔离性(Isolation)<ul>
+<li>多个并发事务不能看到彼此的中间状态</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><ol start="4">
+<li>持久性(Duration)<ul>
+<li>事务完成后事务的影响要反映在物理存储上(事务完成后数据要持久化)</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h3 id="开启事务"><a href="#开启事务" class="headerlink" title="开启事务"></a>开启事务</h3><ul>
+<li><p>begin / start transaction;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">begin;</span><br><span class="line"></span><br><span class="line">delete from tb_score;</span><br><span class="line"></span><br><span class="line">select * from tb_score;</span><br><span class="line"></span><br><span class="line">commit;</span><br><span class="line"></span><br><span class="line">rollback;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>虚拟执行，还未在物理存储上体现。只是当前无法访问，其他用户能访问</p>
+</li>
+</ul>
+<h3 id="提交事务"><a href="#提交事务" class="headerlink" title="提交事务"></a>提交事务</h3><ul>
+<li>commit;</li>
+<li>在物理存储上体现</li>
+</ul>
+<h3 id="回滚事务"><a href="#回滚事务" class="headerlink" title="回滚事务"></a>回滚事务</h3><ul>
+<li>rollback;</li>
+<li>如果有不成功的操作或语句，回到修改执行前的状态。</li>
+</ul>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/wexin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/11/20/MySQL_base/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/11/20/database_mysql/" class="archive-article-date">
-  	<time datetime="2018-11-20T09:48:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-20</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/11/20/database_mysql/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">数据库简介与MySQL基础</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/11/20/database_mysql/">数据库简介与MySQL基础</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-外键和主键"><span class="toc-number">1.</span> <span class="toc-text">1. 外键和主键</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-表与表之间关系处理"><span class="toc-number">2.</span> <span class="toc-text">2. 表与表之间关系处理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-处理一对多"><span class="toc-number">2.1.</span> <span class="toc-text">1. 处理一对多</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-处理多对多关系"><span class="toc-number">2.2.</span> <span class="toc-text">1. 处理多对多关系</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#子查询"><span class="toc-number">3.</span> <span class="toc-text">子查询</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#在一个查询中又使用到了另外一个查询的结果"><span class="toc-number">3.1.</span> <span class="toc-text">在一个查询中又使用到了另外一个查询的结果</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#连接查询"><span class="toc-number">4.</span> <span class="toc-text">连接查询</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#常规"><span class="toc-number">4.1.</span> <span class="toc-text">常规</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#内连接"><span class="toc-number">4.2.</span> <span class="toc-text">内连接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#外连接"><span class="toc-number">4.3.</span> <span class="toc-text">外连接</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-左外连接"><span class="toc-number">4.3.1.</span> <span class="toc-text">1. 左外连接</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-右外连接"><span class="toc-number">4.3.2.</span> <span class="toc-text">2. 右外连接</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-全外连接-MySQL不支持"><span class="toc-number">4.4.</span> <span class="toc-text">3. 全外连接(MySQL不支持)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#事务-transaction"><span class="toc-number">5.</span> <span class="toc-text">事务(transaction)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#概念-让一定数量的语句-操作-，要么全部执行成功，要么全部执行失败"><span class="toc-number">5.1.</span> <span class="toc-text">概念:让一定数量的语句(操作)，要么全部执行成功，要么全部执行失败</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#事务的四个属性-ACID特性"><span class="toc-number">5.2.</span> <span class="toc-text">事务的四个属性(ACID特性)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#开启事务"><span class="toc-number">5.3.</span> <span class="toc-text">开启事务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#提交事务"><span class="toc-number">5.4.</span> <span class="toc-text">提交事务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#回滚事务"><span class="toc-number">5.5.</span> <span class="toc-text">回滚事务</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/11/19/git_install_use/" class="archive-article-date">
-  	<time datetime="2018-11-19T10:20:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-19</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/11/19/git_install_use/">git 安装与使用</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/11/19/hexo_build_blog/" class="archive-article-date">
-  	<time datetime="2018-11-19T09:25:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/11/19/hexo_build_blog/">hexo搭建个人博客</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/11/19/linux_note1/" class="archive-article-date">
-  	<time datetime="2018-11-19T09:00:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/11/19/linux_note1/">linux_note1</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/11/19/linux_note2/" class="archive-article-date">
-  	<time datetime="2018-11-19T06:12:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/11/19/linux_note2/">面向对象拓展</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -353,8 +487,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
