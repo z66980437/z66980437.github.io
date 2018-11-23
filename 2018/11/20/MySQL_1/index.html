@@ -6,16 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>wildpigger-技术专栏</title>
+  <title>MySQL入门 | wildpigger-技术专栏</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="python">
-<meta property="og:type" content="website">
-<meta property="og:title" content="wildpigger-技术专栏">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="关系型数据库如何保证数据的完整性1. 实体完整性 每一条记录都是独一无二的没有冗余数据 - 主键/唯一索引">
+<meta name="keywords" content="python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MySQL入门">
+<meta property="og:url" content="http://yoursite.com/2018/11/20/MySQL_1/index.html">
 <meta property="og:site_name" content="wildpigger-技术专栏">
+<meta property="og:description" content="关系型数据库如何保证数据的完整性1. 实体完整性 每一条记录都是独一无二的没有冗余数据 - 主键/唯一索引">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-11-23T01:28:27.707Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="wildpigger-技术专栏">
+<meta name="twitter:title" content="MySQL入门">
+<meta name="twitter:description" content="关系型数据库如何保证数据的完整性1. 实体完整性 每一条记录都是独一无二的没有冗余数据 - 主键/唯一索引">
   
     <link rel="alternative" href="/atom.xml" title="wildpigger-技术专栏" type="application/atom+xml">
   
@@ -153,225 +157,22 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-redis" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+            <article id="post-MySQL_1" class="article article-type-post " itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/22/redis/">redis</a>
+    <h1 class="article-title" itemprop="name">
+      MySQL入门
     </h1>
   
 
         
         
-        <a href="/2018/11/22/redis/" class="archive-article-date">
-  	<time datetime="2018-11-22T10:00:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=400075246&auto=1&height=66"></iframe>
-
-<h2 id="redis内存数据库-KV数据库（键值对数据库）-缓存"><a href="#redis内存数据库-KV数据库（键值对数据库）-缓存" class="headerlink" title="redis内存数据库 - KV数据库（键值对数据库）- 缓存"></a>redis内存数据库 - KV数据库（键值对数据库）- 缓存</h2><h2 id="redis提供了两种持久化数据的方案"><a href="#redis提供了两种持久化数据的方案" class="headerlink" title="redis提供了两种持久化数据的方案"></a>redis提供了两种持久化数据的方案</h2>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/11/22/redis/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-MySQL_base" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/21/MySQL_base/">MySQL基础-续</a>
-    </h1>
-  
-
-        
-        
-        <a href="/2018/11/21/MySQL_base/" class="archive-article-date">
-  	<time datetime="2018-11-21T09:28:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <iframe frameborder="no" border="0" marginwidth="200" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=445665123&auto=0&height=66"></iframe>
-
-<h2 id="1-外键和主键"><a href="#1-外键和主键" class="headerlink" title="1. 外键和主键"></a>1. 外键和主键</h2><ul>
-<li><p>添加</p>
-<ul>
-<li><p>建表时添加</p>
-        
-      
-
-      
-    </li></ul></li></ul></div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/11/21/MySQL_base/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-database_mysql" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/20/database_mysql/">数据库简介与MySQL基础</a>
-    </h1>
-  
-
-        
-        
-        <a href="/2018/11/20/database_mysql/" class="archive-article-date">
-  	<time datetime="2018-11-20T09:48:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=1308818967&auto=0&height=66"></iframe>
-
-<h1 id="数据库-数据的仓库-database"><a href="#数据库-数据的仓库-database" class="headerlink" title="数据库 - 数据的仓库 - database"></a>数据库 - 数据的仓库 - database</h1><ul>
-<li>DB - database</li>
-<li>DBMS - database manage system</li>
-<li>DBA - database administrator</li>
-<li>DBS - database system = DB + DBMS + DBA
-        
-      
-
-      
-    </li></ul></div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/11/20/database_mysql/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-MySQL_1" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/20/MySQL_1/">MySQL入门</a>
-    </h1>
-  
-
-        
+		<span class="archive-article-date">
+			阅读量 <span id="busuanzi_value_page_pv"></span>
+		</span>
         
         <a href="/2018/11/20/MySQL_1/" class="archive-article-date">
   	<time datetime="2018-11-20T09:42:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-20</time>
@@ -384,27 +185,173 @@
         <p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=532777450&auto=1&height=66"></iframe></p>
 <h2 id="关系型数据库如何保证数据的完整性"><a href="#关系型数据库如何保证数据的完整性" class="headerlink" title="关系型数据库如何保证数据的完整性"></a>关系型数据库如何保证数据的完整性</h2><h3 id="1-实体完整性"><a href="#1-实体完整性" class="headerlink" title="1. 实体完整性"></a>1. 实体完整性</h3><ul>
 <li><p>每一条记录都是独一无二的没有冗余数据 - 主键/唯一索引</p>
-        
+<a id="more"></a>
+<h3 id="2-参照完整性-引用完整性"><a href="#2-参照完整性-引用完整性" class="headerlink" title="2. 参照完整性/引用完整性"></a>2. 参照完整性/引用完整性</h3></li>
+<li><p>外键</p>
+</li>
+</ul>
+<h3 id="3-领域完整性"><a href="#3-领域完整性" class="headerlink" title="3. 领域完整性"></a>3. 领域完整性</h3><ul>
+<li>数据都是有效的，没有无效数据录入进来 - 数据类型/非空约束/默认值约束/检查约束(MySQL不支持检查约束)</li>
+</ul>
+<h2 id="视图"><a href="#视图" class="headerlink" title="视图"></a>视图</h2><ul>
+<li>保存查询出来的表</li>
+</ul>
+<h3 id="创建视图"><a href="#创建视图" class="headerlink" title="创建视图"></a>创建视图</h3><ul>
+<li>create view 名字 as 表;<ul>
+<li>名字：建议vw_开头</li>
+<li>示例：create view vw_dept_emp as (select ename,t3.dname,t1.sal from tbemp t1,(select max(sal) as ‘sal’,tbemp.dno from tbemp group by tbemp.dno) t2, tbdept t3 where t1.dno=t3.dno and t1.sal=t2.sal and t1.dno=t2.dno);</li>
+</ul>
+</li>
+<li>可以配合用户权限将查看限制到列，不能看见整张表</li>
+<li>视图是表的摘要</li>
+<li>改变视图就会改变表</li>
+</ul>
+<h3 id="删除视图"><a href="#删除视图" class="headerlink" title="删除视图"></a>删除视图</h3><ul>
+<li>drop view 视图名;</li>
+</ul>
+<h2 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h2><ul>
+<li>建立在查询时经常作为筛选条件的列</li>
+<li>相当于书的目录 - 提高查询性能<ul>
+<li>主键有一个默认索引</li>
+</ul>
+</li>
+</ul>
+<h3 id="创建索引"><a href="#创建索引" class="headerlink" title="创建索引"></a>创建索引</h3><ul>
+<li>create index 索引名 on 表名(列名[(长度)]);<ul>
+<li>长度：只给前长度个字符创建索引，默认给全部字符创建</li>
+</ul>
+</li>
+</ul>
+<h3 id="删除索引"><a href="#删除索引" class="headerlink" title="删除索引"></a>删除索引</h3><ul>
+<li>alter table 表名 drop index 索引名;</li>
+</ul>
+<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
+<li>索引可以加速查询，表的索引相当于一本书的目录，它可以加速查询，但是同时也会让增删改变得更慢，因为在增删改数据索引要更新，所以索引要建立在经常作为查询筛选条件的列上</li>
+</ul>
+<h2 id="行内经验"><a href="#行内经验" class="headerlink" title="行内经验"></a>行内经验</h2><ul>
+<li>在行业内，时间和空间是不可调和的矛盾，减少时间就意味着增加空间使用量，减少空间就意味着时间增加</li>
+<li>硬件和软件在逻辑上是等效的，能用软件实现就能用硬件实现，能用硬件实现就能用软件实现</li>
+</ul>
+
       
 
       
-    </li></ul></div>
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/wexin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
     <div class="article-info article-info-index">
       
       
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/11/20/MySQL_1/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/11/20/MySQL_1/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2018/11/20/database_mysql/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          数据库简介与MySQL基础
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/11/19/git_install_use/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">git 安装与使用</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -419,286 +366,32 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-git_install_use" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/19/git_install_use/">git 安装与使用</a>
-    </h1>
-  
-
-        
-        
-        <a href="/2018/11/19/git_install_use/" class="archive-article-date">
-  	<time datetime="2018-11-19T10:20:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=1300964183&auto=0&height=66"></iframe>
-
-<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><h2 id="版本控制"><a href="#版本控制" class="headerlink" title="版本控制"></a>版本控制</h2><ul>
-<li>1990s - 锁定模式<ul>
-<li>CVS - Concurrent Version System</li>
-<li>VSS - Visual Source Safe
-        
-      
-
-      
-    </li></ul></li></ul></div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/11/19/git_install_use/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#关系型数据库如何保证数据的完整性"><span class="toc-number">1.</span> <span class="toc-text">关系型数据库如何保证数据的完整性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-实体完整性"><span class="toc-number">1.1.</span> <span class="toc-text">1. 实体完整性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-参照完整性-引用完整性"><span class="toc-number">1.2.</span> <span class="toc-text">2. 参照完整性/引用完整性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-领域完整性"><span class="toc-number">1.3.</span> <span class="toc-text">3. 领域完整性</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#视图"><span class="toc-number">2.</span> <span class="toc-text">视图</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#创建视图"><span class="toc-number">2.1.</span> <span class="toc-text">创建视图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#删除视图"><span class="toc-number">2.2.</span> <span class="toc-text">删除视图</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#索引"><span class="toc-number">3.</span> <span class="toc-text">索引</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#创建索引"><span class="toc-number">3.1.</span> <span class="toc-text">创建索引</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#删除索引"><span class="toc-number">3.2.</span> <span class="toc-text">删除索引</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#注意事项"><span class="toc-number">3.3.</span> <span class="toc-text">注意事项</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#行内经验"><span class="toc-number">4.</span> <span class="toc-text">行内经验</span></a></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
-
   
-    <article id="post-hexo_build_blog" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/19/hexo_build_blog/">hexo搭建个人博客</a>
-    </h1>
   
 
-        
-        
-        <a href="/2018/11/19/hexo_build_blog/" class="archive-article-date">
-  	<time datetime="2018-11-19T09:25:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=545998805&auto=0&height=66"></iframe>
-
-<h2 id="1-安装Node-js"><a href="#1-安装Node-js" class="headerlink" title="1. 安装Node.js"></a>1. 安装Node.js</h2><p>yum -y install nodejs<br>node –version<br>npm –version<br>
-        
-      
-
-      
-    </p></div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/11/19/hexo_build_blog/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-linux_note1" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/19/linux_note1/">linux基础命令</a>
-    </h1>
   
 
-        
-        
-        <a href="/2018/11/19/linux_note1/" class="archive-article-date">
-  	<time datetime="2018-11-19T09:00:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=1296583188&auto=0&height=66"></iframe>
-
-<h2 id="1-别名"><a href="#1-别名" class="headerlink" title="1.别名"></a>1.别名</h2><ul>
-<li>alias：示例：alias rm=‘rm -f’</li>
-<li>unalias：示例：unalias rm      —移除rm=‘rm -f’  回到最初rm，需再次别名成rm -i才能交互删除。</li>
-<li>ls：默认被别名成了ls –color=auto
-        
-      
-
-      
-    </li></ul></div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/11/19/linux_note1/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-linux_note2" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/19/linux_note2/">面向对象拓展</a>
-    </h1>
   
 
-        
-        
-        <a href="/2018/11/19/linux_note2/" class="archive-article-date">
-  	<time datetime="2018-11-19T06:12:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=463352828&auto=0&height=66"></iframe>
-
-<h2 id="1-面向对象的四大支柱：抽象、封装、继承、多态"><a href="#1-面向对象的四大支柱：抽象、封装、继承、多态" class="headerlink" title="1. 面向对象的四大支柱：抽象、封装、继承、多态"></a>1. 面向对象的四大支柱：抽象、封装、继承、多态</h2><ul>
-<li><p>抽象 - 定义类的过程就是提取共性的抽象过程</p>
-<ul>
-<li>数据抽象 - 找到对象的静态特征 - 属性 - 找名词
-        
-      
-
-      
-    </li></ul></li></ul></div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/11/19/linux_note2/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
 
 
@@ -726,8 +419,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

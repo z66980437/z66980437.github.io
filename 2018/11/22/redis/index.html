@@ -6,16 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>wildpigger-技术专栏</title>
+  <title>redis | wildpigger-技术专栏</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="python">
-<meta property="og:type" content="website">
-<meta property="og:title" content="wildpigger-技术专栏">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="redis内存数据库 - KV数据库（键值对数据库）- 缓存redis提供了两种持久化数据的方案">
+<meta name="keywords" content="python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="redis">
+<meta property="og:url" content="http://yoursite.com/2018/11/22/redis/index.html">
 <meta property="og:site_name" content="wildpigger-技术专栏">
+<meta property="og:description" content="redis内存数据库 - KV数据库（键值对数据库）- 缓存redis提供了两种持久化数据的方案">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-11-23T01:28:27.707Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="wildpigger-技术专栏">
+<meta name="twitter:title" content="redis">
+<meta name="twitter:description" content="redis内存数据库 - KV数据库（键值对数据库）- 缓存redis提供了两种持久化数据的方案">
   
     <link rel="alternative" href="/atom.xml" title="wildpigger-技术专栏" type="application/atom+xml">
   
@@ -153,20 +157,22 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-redis" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+            <article id="post-redis" class="article article-type-post " itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/22/redis/">redis</a>
+    <h1 class="article-title" itemprop="name">
+      redis
     </h1>
   
 
         
+        
+		<span class="archive-article-date">
+			阅读量 <span id="busuanzi_value_page_pv"></span>
+		</span>
         
         <a href="/2018/11/22/redis/" class="archive-article-date">
   	<time datetime="2018-11-22T10:00:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-22</time>
@@ -178,97 +184,206 @@
       
         <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=400075246&auto=1&height=66"></iframe>
 
-<h2 id="redis内存数据库-KV数据库（键值对数据库）-缓存"><a href="#redis内存数据库-KV数据库（键值对数据库）-缓存" class="headerlink" title="redis内存数据库 - KV数据库（键值对数据库）- 缓存"></a>redis内存数据库 - KV数据库（键值对数据库）- 缓存</h2><h2 id="redis提供了两种持久化数据的方案"><a href="#redis提供了两种持久化数据的方案" class="headerlink" title="redis提供了两种持久化数据的方案"></a>redis提供了两种持久化数据的方案</h2>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/11/22/redis/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-MySQL_base" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/21/MySQL_base/">MySQL基础-续</a>
-    </h1>
-  
-
-        
-        
-        <a href="/2018/11/21/MySQL_base/" class="archive-article-date">
-  	<time datetime="2018-11-21T09:28:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <iframe frameborder="no" border="0" marginwidth="200" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=445665123&auto=0&height=66"></iframe>
-
-<h2 id="1-外键和主键"><a href="#1-外键和主键" class="headerlink" title="1. 外键和主键"></a>1. 外键和主键</h2><ul>
-<li><p>添加</p>
+<h2 id="redis内存数据库-KV数据库（键值对数据库）-缓存"><a href="#redis内存数据库-KV数据库（键值对数据库）-缓存" class="headerlink" title="redis内存数据库 - KV数据库（键值对数据库）- 缓存"></a>redis内存数据库 - KV数据库（键值对数据库）- 缓存</h2><h2 id="redis提供了两种持久化数据的方案"><a href="#redis提供了两种持久化数据的方案" class="headerlink" title="redis提供了两种持久化数据的方案"></a>redis提供了两种持久化数据的方案</h2><a id="more"></a>
 <ul>
-<li><p>建表时添加</p>
-        
+<li>RDB - 周期性将内存数据写入dump文件</li>
+<li>AOF - Append Only File - 把执行过的命令保存起来</li>
+<li>同时使用恢复数据时，先用AOF，再用RDB<h2 id="默认开了16个数据库，通过select-0-15-切换"><a href="#默认开了16个数据库，通过select-0-15-切换" class="headerlink" title="默认开了16个数据库，通过select [0-15]切换"></a>默认开了16个数据库，通过select [0-15]切换</h2></li>
+</ul>
+<h2 id="redis安装"><a href="#redis安装" class="headerlink" title="redis安装"></a>redis安装</h2><h3 id="1-下载源文件"><a href="#1-下载源文件" class="headerlink" title="1.下载源文件"></a>1.下载源文件</h3><ul>
+<li>wget <a href="http://download.redis.io/releases/redis-5.0.0.tar.gz" target="_blank" rel="noopener">http://download.redis.io/releases/redis-5.0.0.tar.gz</a></li>
+</ul>
+<h3 id="2-解压缩"><a href="#2-解压缩" class="headerlink" title="2. 解压缩"></a>2. 解压缩</h3><ul>
+<li>gunzip redis-5.0.0.tar.gz</li>
+</ul>
+<h3 id="3-解归档"><a href="#3-解归档" class="headerlink" title="3. 解归档"></a>3. 解归档</h3><ul>
+<li>tar -xvf redis-5.0.0.tar</li>
+</ul>
+<h3 id="4-源文件构建安装"><a href="#4-源文件构建安装" class="headerlink" title="4. 源文件构建安装"></a>4. 源文件构建安装</h3><ul>
+<li>进入redis-5.0.0文件夹</li>
+<li>执行make &amp;&amp; makeinstall 指令</li>
+</ul>
+<h3 id="5-检查安装是否成功"><a href="#5-检查安装是否成功" class="headerlink" title="5. 检查安装是否成功"></a>5. 检查安装是否成功</h3><ul>
+<li>redis –version</li>
+</ul>
+<h2 id="启动redis服务"><a href="#启动redis服务" class="headerlink" title="启动redis服务"></a>启动redis服务</h2><ul>
+<li>命令方式启动<ul>
+<li>redis-server –requirepass 123456 </li>
+</ul>
+</li>
+<li>文件方式启动<ul>
+<li>redis-server redis.conf &gt; redis.log &amp;</li>
+</ul>
+</li>
+</ul>
+<h3 id="配置文件修改"><a href="#配置文件修改" class="headerlink" title="配置文件修改"></a>配置文件修改</h3><ul>
+<li>将redis目录下的redis.conf拷贝到用户主目录</li>
+<li>vim编辑主用户目录下的redis.conf，</li>
+<li>将69行，修改成私有ip，通过ifconfig eth0 查看inet地址</li>
+<li>将507行requirepass的注释删掉，并把后面内容改成密码</li>
+<li>将699行appendonly 改成yes - 开启AOF方案</li>
+</ul>
+<h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><ul>
+<li>添加键值对<ul>
+<li>set 键 值</li>
+</ul>
+</li>
+<li>获取键值<ul>
+<li>get 键</li>
+</ul>
+</li>
+<li>设置键值对超时消失<ul>
+<li>ttl 键<ul>
+<li>-1:不超时</li>
+<li>-2:已超时</li>
+</ul>
+</li>
+<li>expire 键 时间（秒）</li>
+</ul>
+</li>
+<li>已有键值对的数目<ul>
+<li>dbsize</li>
+</ul>
+</li>
+<li>查看所有键值对<ul>
+<li>keys * </li>
+</ul>
+</li>
+<li>保存<ul>
+<li>save / bgsave(后台保存)<ul>
+<li>将数据存到dump文件中</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>清除<ul>
+<li>flushall<ul>
+<li>清空所有数据库</li>
+</ul>
+</li>
+<li>flushdb<ul>
+<li>清空当前数据库</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>关闭服务<ul>
+<li>shutdow [nosave|save]</li>
+</ul>
+</li>
+</ul>
+<p>#Redis命令手册：<a href="http://redisdoc.com/" target="_blank" rel="noopener">http://redisdoc.com/</a></p>
+
       
 
       
-    </li></ul></li></ul></div>
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/wexin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
     <div class="article-info article-info-index">
       
       
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/11/21/MySQL_base/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/11/22/redis/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2018/11/21/MySQL_base/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">MySQL基础-续</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -283,422 +398,32 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-database_mysql" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/20/database_mysql/">数据库简介与MySQL基础</a>
-    </h1>
-  
-
-        
-        
-        <a href="/2018/11/20/database_mysql/" class="archive-article-date">
-  	<time datetime="2018-11-20T09:48:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=1308818967&auto=0&height=66"></iframe>
-
-<h1 id="数据库-数据的仓库-database"><a href="#数据库-数据的仓库-database" class="headerlink" title="数据库 - 数据的仓库 - database"></a>数据库 - 数据的仓库 - database</h1><ul>
-<li>DB - database</li>
-<li>DBMS - database manage system</li>
-<li>DBA - database administrator</li>
-<li>DBS - database system = DB + DBMS + DBA
-        
-      
-
-      
-    </li></ul></div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/11/20/database_mysql/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#redis内存数据库-KV数据库（键值对数据库）-缓存"><span class="toc-number">1.</span> <span class="toc-text">redis内存数据库 - KV数据库（键值对数据库）- 缓存</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#redis提供了两种持久化数据的方案"><span class="toc-number">2.</span> <span class="toc-text">redis提供了两种持久化数据的方案</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#默认开了16个数据库，通过select-0-15-切换"><span class="toc-number">3.</span> <span class="toc-text">默认开了16个数据库，通过select [0-15]切换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#redis安装"><span class="toc-number">4.</span> <span class="toc-text">redis安装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-下载源文件"><span class="toc-number">4.1.</span> <span class="toc-text">1.下载源文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-解压缩"><span class="toc-number">4.2.</span> <span class="toc-text">2. 解压缩</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-解归档"><span class="toc-number">4.3.</span> <span class="toc-text">3. 解归档</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-源文件构建安装"><span class="toc-number">4.4.</span> <span class="toc-text">4. 源文件构建安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-检查安装是否成功"><span class="toc-number">4.5.</span> <span class="toc-text">5. 检查安装是否成功</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#启动redis服务"><span class="toc-number">5.</span> <span class="toc-text">启动redis服务</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#配置文件修改"><span class="toc-number">5.1.</span> <span class="toc-text">配置文件修改</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#指令"><span class="toc-number">6.</span> <span class="toc-text">指令</span></a></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
-
   
-    <article id="post-MySQL_1" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/20/MySQL_1/">MySQL入门</a>
-    </h1>
   
 
-        
-        
-        <a href="/2018/11/20/MySQL_1/" class="archive-article-date">
-  	<time datetime="2018-11-20T09:42:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=532777450&auto=1&height=66"></iframe></p>
-<h2 id="关系型数据库如何保证数据的完整性"><a href="#关系型数据库如何保证数据的完整性" class="headerlink" title="关系型数据库如何保证数据的完整性"></a>关系型数据库如何保证数据的完整性</h2><h3 id="1-实体完整性"><a href="#1-实体完整性" class="headerlink" title="1. 实体完整性"></a>1. 实体完整性</h3><ul>
-<li><p>每一条记录都是独一无二的没有冗余数据 - 主键/唯一索引</p>
-        
-      
-
-      
-    </li></ul></div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/11/20/MySQL_1/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-git_install_use" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/19/git_install_use/">git 安装与使用</a>
-    </h1>
   
 
-        
-        
-        <a href="/2018/11/19/git_install_use/" class="archive-article-date">
-  	<time datetime="2018-11-19T10:20:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=1300964183&auto=0&height=66"></iframe>
-
-<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><h2 id="版本控制"><a href="#版本控制" class="headerlink" title="版本控制"></a>版本控制</h2><ul>
-<li>1990s - 锁定模式<ul>
-<li>CVS - Concurrent Version System</li>
-<li>VSS - Visual Source Safe
-        
-      
-
-      
-    </li></ul></li></ul></div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/11/19/git_install_use/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hexo_build_blog" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/19/hexo_build_blog/">hexo搭建个人博客</a>
-    </h1>
   
 
-        
-        
-        <a href="/2018/11/19/hexo_build_blog/" class="archive-article-date">
-  	<time datetime="2018-11-19T09:25:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=545998805&auto=0&height=66"></iframe>
-
-<h2 id="1-安装Node-js"><a href="#1-安装Node-js" class="headerlink" title="1. 安装Node.js"></a>1. 安装Node.js</h2><p>yum -y install nodejs<br>node –version<br>npm –version<br>
-        
-      
-
-      
-    </p></div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/11/19/hexo_build_blog/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-linux_note1" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/19/linux_note1/">linux基础命令</a>
-    </h1>
-  
-
-        
-        
-        <a href="/2018/11/19/linux_note1/" class="archive-article-date">
-  	<time datetime="2018-11-19T09:00:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=1296583188&auto=0&height=66"></iframe>
-
-<h2 id="1-别名"><a href="#1-别名" class="headerlink" title="1.别名"></a>1.别名</h2><ul>
-<li>alias：示例：alias rm=‘rm -f’</li>
-<li>unalias：示例：unalias rm      —移除rm=‘rm -f’  回到最初rm，需再次别名成rm -i才能交互删除。</li>
-<li>ls：默认被别名成了ls –color=auto
-        
-      
-
-      
-    </li></ul></div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/11/19/linux_note1/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-linux_note2" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/19/linux_note2/">面向对象拓展</a>
-    </h1>
-  
-
-        
-        
-        <a href="/2018/11/19/linux_note2/" class="archive-article-date">
-  	<time datetime="2018-11-19T06:12:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=463352828&auto=0&height=66"></iframe>
-
-<h2 id="1-面向对象的四大支柱：抽象、封装、继承、多态"><a href="#1-面向对象的四大支柱：抽象、封装、继承、多态" class="headerlink" title="1. 面向对象的四大支柱：抽象、封装、继承、多态"></a>1. 面向对象的四大支柱：抽象、封装、继承、多态</h2><ul>
-<li><p>抽象 - 定义类的过程就是提取共性的抽象过程</p>
-<ul>
-<li>数据抽象 - 找到对象的静态特征 - 属性 - 找名词
-        
-      
-
-      
-    </li></ul></li></ul></div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/11/19/linux_note2/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
 
 
@@ -726,8 +451,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
