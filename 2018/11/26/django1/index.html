@@ -6,20 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>redis | wildpigger-技术专栏</title>
+  <title>django环境 | wildpigger-技术专栏</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="redis内存数据库 - KV数据库（键值对数据库）- 缓存redis提供了两种持久化数据的方案">
+  <meta name="description" content="环境与创建项目 Django概念: MVC模式/MVT模式 环境搭建: virtualenv的安装与使用,pycharm中环境的配置 项目创建: 创建Django工程目录，创建应用app，使用admin管理后台 admin管理后台：超级用户的创建，模型注册，模型中数据展示(list_display)、搜索(search_field)、过滤(list_filter)等">
 <meta name="keywords" content="python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="redis">
-<meta property="og:url" content="http://yoursite.com/2018/11/22/redis/index.html">
+<meta property="og:title" content="django环境">
+<meta property="og:url" content="http://yoursite.com/2018/11/26/django1/index.html">
 <meta property="og:site_name" content="wildpigger-技术专栏">
-<meta property="og:description" content="redis内存数据库 - KV数据库（键值对数据库）- 缓存redis提供了两种持久化数据的方案">
+<meta property="og:description" content="环境与创建项目 Django概念: MVC模式/MVT模式 环境搭建: virtualenv的安装与使用,pycharm中环境的配置 项目创建: 创建Django工程目录，创建应用app，使用admin管理后台 admin管理后台：超级用户的创建，模型注册，模型中数据展示(list_display)、搜索(search_field)、过滤(list_filter)等">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-11-23T03:18:24.344Z">
+<meta property="og:image" content="https://github.com/coco369/knowledge/raw/master/django/images/mvc.jpg">
+<meta property="og:image" content="https://github.com/coco369/knowledge/raw/master/django/images/mvc_request_response.png">
+<meta property="og:updated_time" content="2018-11-26T13:05:07.276Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="redis">
-<meta name="twitter:description" content="redis内存数据库 - KV数据库（键值对数据库）- 缓存redis提供了两种持久化数据的方案">
+<meta name="twitter:title" content="django环境">
+<meta name="twitter:description" content="环境与创建项目 Django概念: MVC模式/MVT模式 环境搭建: virtualenv的安装与使用,pycharm中环境的配置 项目创建: 创建Django工程目录，创建应用app，使用admin管理后台 admin管理后台：超级用户的创建，模型注册，模型中数据展示(list_display)、搜索(search_field)、过滤(list_filter)等">
+<meta name="twitter:image" content="https://github.com/coco369/knowledge/raw/master/django/images/mvc.jpg">
   
     <link rel="alternative" href="/atom.xml" title="wildpigger-技术专栏" type="application/atom+xml">
   
@@ -157,14 +160,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-redis" class="article article-type-post " itemscope="" itemprop="blogPost">
+            <article id="post-django1" class="article article-type-post " itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      redis
+      django环境
     </h1>
   
 
@@ -174,105 +177,74 @@
 			阅读量 <span id="busuanzi_value_page_pv"></span>
 		</span>
         
-        <a href="/2018/11/22/redis/" class="archive-article-date">
-  	<time datetime="2018-11-22T10:00:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-22</time>
+        <a href="/2018/11/26/django1/" class="archive-article-date">
+  	<time datetime="2018-11-26T10:20:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-26</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=400075246&auto=0&height=66"></iframe>
-
-<h2 id="redis内存数据库-KV数据库（键值对数据库）-缓存"><a href="#redis内存数据库-KV数据库（键值对数据库）-缓存" class="headerlink" title="redis内存数据库 - KV数据库（键值对数据库）- 缓存"></a>redis内存数据库 - KV数据库（键值对数据库）- 缓存</h2><h2 id="redis提供了两种持久化数据的方案"><a href="#redis提供了两种持久化数据的方案" class="headerlink" title="redis提供了两种持久化数据的方案"></a>redis提供了两种持久化数据的方案</h2><a id="more"></a>
+        <h1 id="环境与创建项目"><a href="#环境与创建项目" class="headerlink" title="环境与创建项目"></a>环境与创建项目</h1><ul>
+<li>Django概念: MVC模式/MVT模式</li>
+<li>环境搭建: virtualenv的安装与使用,pycharm中环境的配置</li>
+<li>项目创建: 创建Django工程目录，创建应用app，使用admin管理后台</li>
+<li>admin管理后台：超级用户的创建，模型注册，模型中数据展示(list_display)、搜索(search_field)、过滤(list_filter)等<a id="more"></a>
+<h3 id="Django介绍"><a href="#Django介绍" class="headerlink" title="Django介绍"></a>Django介绍</h3></li>
+</ul>
+<h4 id="什么是MVC模式"><a href="#什么是MVC模式" class="headerlink" title="什么是MVC模式"></a>什么是MVC模式</h4><p>MVC全名是Model View Controller，是模型(model)－视图(view)－控制器(controller)的缩写，一种软件设计典范，用一种业务逻辑、数据、界面显示分离的方法组织代码，将业务逻辑聚集到一个部件里面，在改进和个性化定制界面及用户交互的同时，不需要重新编写业务逻辑。MVC被独特的发展起来用于映射传统的输入、处理和输出功能在一个逻辑的图形化用户界面的结构中。 <strong>通俗的来讲就是，强制性的使应用程序的输入，处理和输出分开。</strong></p>
+<p><strong>核心思想</strong>：解耦</p>
+<p><strong>优点</strong>：减低各个模块之间的耦合性，方便变更，更容易重构代码，最大程度的实现了代码的重用</p>
+<p>MVC(Model, View, Controller) Model: 即数据存取层。用于封装于应用程序的业务逻辑相关的数据，以及对数据的处理。说白了就是模型对象负责在数据库中存取数据</p>
+<p>View: 即表现层。负责数据的显示和呈现。渲染的html页面给用户，或者返回数据给用户。</p>
+<p>Controller: 即业务逻辑层。负责从用户端收集用户的输入，进行业务逻辑处理，包括向模型中发送数据，进行CRUD操作。</p>
+<p>图解：<br><a href="https://github.com/coco369/knowledge/blob/master/django/images/mvc.jpg" target="_blank" rel="noopener"><img src="https://github.com/coco369/knowledge/raw/master/django/images/mvc.jpg" alt="图"></a></p>
+<p>浏览器中MVC的表现形式图解:<br><a href="https://github.com/coco369/knowledge/blob/master/django/images/mvc_request_response.png" target="_blank" rel="noopener"><img src="https://github.com/coco369/knowledge/raw/master/django/images/mvc_request_response.png" alt="图"></a></p>
+<hr>
+<h2 id="Django的模式简介"><a href="#Django的模式简介" class="headerlink" title="Django的模式简介"></a>Django的模式简介</h2><h4 id="MVT模式"><a href="#MVT模式" class="headerlink" title="MVT模式"></a>MVT模式</h4><p>严格来说，Django的模式应该是MVT模式，本质上和MVC没什么区别，也是各组件之间为了保持松耦合关系，只是定义上有些许不同。</p>
+<p>Model： 负责业务与数据库(ORM)的对象</p>
+<p>View： 负责业务逻辑并适当调用Model和Template</p>
+<p>Template: 负责把页面渲染展示给用户</p>
+<p>注意： Django中还有一个url分发器，也叫作路由。主要用于将url请求发送给不同的View处理，View在进行相关的业务逻辑处理。</p>
+<h3 id="virtualenv环境"><a href="#virtualenv环境" class="headerlink" title="virtualenv环境"></a>virtualenv环境</h3><p>1.创建环境<br>pip install virtualenv<br>先建好env文件夹来专门保存所有的环境解释器，再再见单独文件夹对应的项目然后在cmd中切换到这文件夹下进行环境的配置</p>
+<ol>
+<li>进入/退出env</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">进入　cd env/Scripts/文件夹  在activate命令</span><br><span class="line"></span><br><span class="line">退出　deactivate</span><br></pre></td></tr></table></figure>
+<p>2.使用<br>virtualenv  –no-site-packages  djenvl<br>只有一个Python的版本这些就建好了，如果还有其他版本的必须加参数指定<br> virtualenv  –no-site-packages   -p  D:\python3\python.exe   djenvl<br>成功后可以在创建专门存储代码的文件夹中创建项目的对应的文件<br>django-admin  startproject  day01<br>python manage.py<br>3.激活</p>
 <ul>
-<li>RDB - 周期性将内存数据写入dump文件</li>
-<li>AOF - Append Only File - 把执行过的命令保存起来</li>
-<li>同时使用恢复数据时，先用AOF，再用RDB<h2 id="默认开了16个数据库，通过select-0-15-切换"><a href="#默认开了16个数据库，通过select-0-15-切换" class="headerlink" title="默认开了16个数据库，通过select [0-15]切换"></a>默认开了16个数据库，通过select [0-15]切换</h2></li>
-</ul>
-<h2 id="redis安装"><a href="#redis安装" class="headerlink" title="redis安装"></a>redis安装</h2><h3 id="1-下载源文件"><a href="#1-下载源文件" class="headerlink" title="1.下载源文件"></a>1.下载源文件</h3><ul>
-<li>wget <a href="http://download.redis.io/releases/redis-5.0.0.tar.gz" target="_blank" rel="noopener">http://download.redis.io/releases/redis-5.0.0.tar.gz</a></li>
-</ul>
-<h3 id="2-解压缩"><a href="#2-解压缩" class="headerlink" title="2. 解压缩"></a>2. 解压缩</h3><ul>
-<li>gunzip redis-5.0.0.tar.gz</li>
-</ul>
-<h3 id="3-解归档"><a href="#3-解归档" class="headerlink" title="3. 解归档"></a>3. 解归档</h3><ul>
-<li>tar -xvf redis-5.0.0.tar</li>
-</ul>
-<h3 id="4-源文件构建安装"><a href="#4-源文件构建安装" class="headerlink" title="4. 源文件构建安装"></a>4. 源文件构建安装</h3><ul>
-<li>进入redis-5.0.0文件夹</li>
-<li>执行make &amp;&amp; makeinstall 指令</li>
-</ul>
-<h3 id="5-检查安装是否成功"><a href="#5-检查安装是否成功" class="headerlink" title="5. 检查安装是否成功"></a>5. 检查安装是否成功</h3><ul>
-<li>redis –version</li>
-</ul>
-<h2 id="启动redis服务"><a href="#启动redis服务" class="headerlink" title="启动redis服务"></a>启动redis服务</h2><ul>
-<li>命令方式启动<ul>
-<li>redis-server –requirepass 密码 –appendonly yes &gt; redis log &amp; </li>
+<li>进入<ul>
+<li>cd  djenv1/Script</li>
 </ul>
 </li>
-<li>文件方式启动<ul>
-<li>redis-server redis.conf &gt; redis.log &amp;</li>
+<li>执行<ul>
+<li>activate</li>
 </ul>
 </li>
-</ul>
-<h3 id="配置文件修改"><a href="#配置文件修改" class="headerlink" title="配置文件修改"></a>配置文件修改</h3><ul>
-<li>将redis目录下的redis.conf拷贝到用户主目录</li>
-<li>vim编辑主用户目录下的redis.conf，</li>
-<li>将69行，修改成私有ip，通过ifconfig eth0 查看inet地址</li>
-<li>将507行requirepass的注释删掉，并把后面内容改成密码</li>
-<li>将699行appendonly 改成yes - 开启AOF方案</li>
-</ul>
-<h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><ul>
-<li>添加键值对<ul>
-<li>set 键 值</li>
-</ul>
-</li>
-<li>获取键值<ul>
-<li>get 键</li>
-</ul>
-</li>
-<li>设置键值对超时消失<ul>
-<li>ttl 键<ul>
-<li>-1:不超时</li>
-<li>-2:已超时</li>
-</ul>
-</li>
-<li>expire 键 时间（秒）</li>
-</ul>
-</li>
-<li>已有键值对的数目<ul>
-<li>dbsize</li>
-</ul>
-</li>
-<li>查看所有键值对<ul>
-<li>keys * </li>
-</ul>
-</li>
-<li>保存<ul>
-<li>save / bgsave(后台保存)<ul>
-<li>将数据存到dump文件中</li>
-</ul>
+<li><p>退出</p>
+<p>deactivate</p>
+<h3 id="创建Django项目"><a href="#创建Django项目" class="headerlink" title="创建Django项目"></a>创建Django项目</h3><p>1.安装django,pymysql</p>
 </li>
 </ul>
-</li>
-<li>清除<ul>
-<li>flushall<ul>
-<li>清空所有数据库</li>
-</ul>
-</li>
-<li>flushdb<ul>
-<li>清空当前数据库</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>关闭服务<ul>
-<li>shutdow [nosave|save]</li>
-</ul>
-</li>
-</ul>
-<p>#Redis命令手册：<a href="http://redisdoc.com/" target="_blank" rel="noopener">http://redisdoc.com/</a></p>
+<p>pip install Django==1.11</p>
+<p>pip install PyMysql</p>
+<p>注意：这些都是在给先前创建的工程相当于添加库。</p>
+<p>里面会自动生成一些文件</p>
+<p>manage.py： 是Django用于管理本项目的管理集工具，之后站点运行，数据库自动生成，数据表的修改等都是通过该文件完成。</p>
+<p><strong>init</strong>.py： 指明该目录结构是一个python包，暂无内容，在后期会初始化一些工具会使用到。</p>
+<p>seetings.py： Django项目的配置文件，其中定义了本项目的引用组件，项目名，数据库，静态资源，调试模式，域名限制等</p>
+<p>urls.py：项目的URL路由映射，实现客户端请求url由哪个模块进行响应。</p>
+<p>wsgi.py：定义WSGI接口信息，通常本文件生成后无需改动</p>
+<p>2.运行jango项目</p>
+<p>python manage.py runserver  端口</p>
+<p>该命令是运行项目，端口可以不用写，启动的时候会默认随机创建一个可以使用的端口</p>
+<p>3.创建APP应用</p>
+<p>python  manage.py  startapp  app_name</p>
+<p>最后的app_name是文件名</p>
+<p>4.settings.py配置文件的解读</p>
+<p>LANGUAGE_CODE = ‘zh-hans’ 表示中文 LANGUAGE_CODE = ‘en-us’ 表示英文</p>
+<p>设置时区：    TIME_ZONE = ‘Asia/Shanghai’</p>
+<h6 id="b-时区解释：-需要详细回顾思考时区问题"><a href="#b-时区解释：-需要详细回顾思考时区问题" class="headerlink" title="b) 时区解释： (需要详细回顾思考时区问题)"></a>b) 时区解释： (需要详细回顾思考时区问题)</h6><p>UTC：世界标准时间，也就是平常说的零时区。 北京时间表示东八区时间，即UTC+8</p>
 
       
 
@@ -362,7 +334,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/11/22/redis/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/11/26/django1/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -376,18 +348,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/11/26/django1/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          django环境
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/11/22/MySQL_1/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">MySQL入门</div>
+    <a href="/2018/11/22/redis/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">redis</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -414,7 +377,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#redis内存数据库-KV数据库（键值对数据库）-缓存"><span class="toc-number">1.</span> <span class="toc-text">redis内存数据库 - KV数据库（键值对数据库）- 缓存</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#redis提供了两种持久化数据的方案"><span class="toc-number">2.</span> <span class="toc-text">redis提供了两种持久化数据的方案</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#默认开了16个数据库，通过select-0-15-切换"><span class="toc-number">3.</span> <span class="toc-text">默认开了16个数据库，通过select [0-15]切换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#redis安装"><span class="toc-number">4.</span> <span class="toc-text">redis安装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-下载源文件"><span class="toc-number">4.1.</span> <span class="toc-text">1.下载源文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-解压缩"><span class="toc-number">4.2.</span> <span class="toc-text">2. 解压缩</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-解归档"><span class="toc-number">4.3.</span> <span class="toc-text">3. 解归档</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-源文件构建安装"><span class="toc-number">4.4.</span> <span class="toc-text">4. 源文件构建安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-检查安装是否成功"><span class="toc-number">4.5.</span> <span class="toc-text">5. 检查安装是否成功</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#启动redis服务"><span class="toc-number">5.</span> <span class="toc-text">启动redis服务</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#配置文件修改"><span class="toc-number">5.1.</span> <span class="toc-text">配置文件修改</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#指令"><span class="toc-number">6.</span> <span class="toc-text">指令</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#环境与创建项目"><span class="toc-number">1.</span> <span class="toc-text">环境与创建项目</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Django介绍"><span class="toc-number">1.0.1.</span> <span class="toc-text">Django介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#什么是MVC模式"><span class="toc-number">1.0.1.1.</span> <span class="toc-text">什么是MVC模式</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Django的模式简介"><span class="toc-number">1.1.</span> <span class="toc-text">Django的模式简介</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#MVT模式"><span class="toc-number">1.1.0.1.</span> <span class="toc-text">MVT模式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#virtualenv环境"><span class="toc-number">1.1.1.</span> <span class="toc-text">virtualenv环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#创建Django项目"><span class="toc-number">1.1.2.</span> <span class="toc-text">创建Django项目</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#b-时区解释：-需要详细回顾思考时区问题"><span class="toc-number">1.1.2.0.0.1.</span> <span class="toc-text">b) 时区解释： (需要详细回顾思考时区问题)</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
